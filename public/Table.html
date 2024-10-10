@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        table {
+            font-family: Arial;
+        }
+        caption {
+           font-size: 35px;
+           font-weight: bold;
+           color: rgb(37, 37, 97);
+           text-shadow: 1px 1px 2px black;
+           text-align: left;
+           margin-bottom: 20px;
+        }
+        th {
+            font-weight: normal;
+            color: gray;
+        }
+        .bi-circle-fill {
+            font-size: 6px;
+            color: gray;
+        }
+        .flag {
+            width: 24%;
+        }
+        .ind {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .player {
+            width: 50px;
+            height: 90px;
+        }
+        .div1 {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        .p-fname {
+            font-size: 13px;
+            font-family: 'segoe-UI';
+            font-weight: bold;
+        }
+        .p-lname {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .p-lname2{
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .col-1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: right;
+        }
+        tbody tr:first-child {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        tbody {
+            color: rgb(43, 43, 85);
+        }
+        .bi-chevron-up {
+            font-size: 12px;
+            font-weight: bold;
+            color: green;
+        }
+        .slno {
+            font-size: small;
+            font-weight: bold;
+        }
+        .cnt {
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+
+        }
+        .rating {
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .carrer {
+            font-size: 14px;
+            font-weight: bold;
+        }
+       td {
+        background-size: 200px 120px;
+        background-repeat: no-repeat;
+        background-position: right;
+       }
+        
+    </style>
+</head>
+<body>
+    
+    <table width="100%" cellspacing="" cellpadding="8px">
+       <caption>Men's test All-Rounder Rankings</caption>
+       <colgroup span="4"></colgroup>
+        <thead style="background-color: lightgrey;">
+            <tr>
+                 <th width="40px" align="left">Pos</th>
+                <th width="120px" align="left">Team</th>
+                <th width="100px" align="left">Players</th>
+                <th width="100px" align="left">Rating</th>
+                <th class="carrer-head" width="220px" align="right">Career Best Rating</th>
+            </tr>
+        </thead>
+       <tbody>
+            <tr style="background-color: lightgrey;">
+                <td>01 <span class="bi bi-circle-fill"></span></td>
+                <td>
+                    <img src="./images/flag.PNG" class="flag">
+                    <span class="ind">IND</span>
+                </td>
+                <td background="./images/icc-logo.png">
+                    <div class="div1">
+                        <div class="col-1">
+                            <div class="p-fname">Ravindra</div>
+                            <div class="p-lname">JADEJA</div>
+                        </div>
+                        <div><img src="./images/player.PNG" class="player"></div>
+                    </div>
+                </td>
+                <td>444</td>
+                <td align="right">469 v England at Rajkot 2024</td>
+            </tr>
+            <tr>
+                <td><span class="slno">02</span> <span class="bi bi-circle-fill"></span></td>
+                <td>
+                    <img src="./images/flag.PNG" class="flag">
+                    <span class="cnt">IND</span>
+                </td>
+                <td>
+                    <span class="p-fname">Ravichandran</span>
+                    <span class="p-lname2">ASHWIN</span> 
+                </td>
+                <td class="rating">332</td>
+                <td class="carrer" align="right">492 v England at Rajkot 2016</td>
+            </tr>
+            <tr style="background-color: lightgrey;">
+                <td><span class="slno">03</span> <span class="bi bi-circle-fill"></span></td>
+                <td>
+                    <img src="./images/icc-img2.PNG" class="flag">
+                    <span class="cnt">BANGLADESH</span>
+                </td>
+                <td>
+                    <span class="p-fname">Shakib</span> 
+                    <span class="p-lname2">AL HASAN</span>
+                </td>
+                <td class="rating">308</td>
+                <td class="carrer" align="right">489 v Australia at Mirpur 2017</td>
+            </tr>
+            <tr>
+                <td><span class="slno">04</span> <span class="bi bi-circle-fill"></span></td>
+                <td>
+                    <img src="./images/icc3.PNG" class="flag">
+                    <span class="cnt">ENGLAND</span>
+                </td>
+                <td>
+                    <span class="p-fname">Joe</span> 
+                    <span class="p-lname2">ROOT</span>
+                </td>
+                <td class="rating">293</td>
+                <td class="carrer" align="right">313 v India at Hyderabad 2024</td>
+            </tr>
+            <tr style="background-color: lightgrey;">
+                <td><span class="slno">05</span> <span class="bi bi-circle-fill"></span></td>
+                <td>
+                    <img src="./images/icc4.PNG" class="flag">
+                    <span class="cnt">WEST INDIES</span>
+                </td>
+                <td>
+                    <span class="p-fname">Jashon</span>
+                    <span class="p-lname2">HOLDER</span>
+                </td>
+                <td class="rating">332</td>
+                <td class="carrer" align="right">485 v England at Southampton 2020</td>
+            </tr>
+            <tr>
+                <td><span class="slno">06</span> <span class="bi bi-circle-fill"></span></td>
+                <td>
+                    <img src="./images/flag.PNG" class="flag">
+                    <span class="cnt">IND</span>
+                </td>
+                <td>
+                    <span class="p-fname">Axar</span> 
+                    <span class="p-lname2">PATEL</span>
+                </td>
+                <td class="rating">269</td>
+                <td class="carrer" align="right">316 v Australia at Ahmedabad 2023</td>
+            </tr>
+            <tr style="background-color: lightgrey;">
+                <td><span class="slno">07</span> <span class="bi bi-circle-fill"></span></td>
+                <td>
+                    <img src="./images/icc3.PNG" class="flag">
+                    <span class="cnt">ENGLAND</span>
+                </td>
+                <td>
+                    <span class="p-fname">Ben</span> 
+                    <span class="p-lname2">STOKES</span>
+                </td>
+                <td class="rating">261</td>
+                <td class="carrer" align="right">497 v West Indies at Old Trafford 2020</td>
+            </tr>
+            <tr>
+                <td><span class="slno">08</span> <span class="bi bi-chevron-up">1</span></td>
+                <td>
+                    <img src="./images/icc3.PNG" class="flag">
+                    <span class="cnt">ENGLAND</span>
+                </td>
+                <td>
+                    <span class="p-fname">Chris</span> 
+                    <span class="p-lname2">WOAKES</span>
+                </td>
+                <td class="rating">259</td>
+                <td class="carrer" align="right">273 v Pakistan at Old Trafford 2020</td>
+            </tr>
+       </tbody>
+       <tfoot>
+        <tr>
+            <td colspan="5" align="center" style="background-color: lightyellow;">Last updated on 31 August 2024</td>
+        </tr>
+       </tfoot>
+    </table>
+
+</body>
+</html>

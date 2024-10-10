@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        form {
+            height: 300px;
+            width: 200px;
+            padding: 20px;
+            border: 1px solid black;
+            box-shadow: 2px 2px 2px black;
+        }
+        .form-group {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .form-label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .btn-login {
+            width: 100%;
+            border: none;
+            background-color: gold;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        input {
+            width: 100%;
+            height: 20px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        .login-title {
+            font-size: 18px;
+            text-align: center;
+            border-bottom: 1px solid gray;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input:hover {
+            box-shadow: 1px 1px 1px 1px aqua;
+        }
+        .btn-login:hover{
+            background-color: cadetblue;
+            transition: 1s;
+        }
+        dd {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <div class="login-title bi bi-person-fill">User Login</div>
+        <div class="form-group">
+            <label for="Username" class="form-label">User Name</label>
+            <div>
+                <input type="text" name="Username">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Password" class="form-label">Password</label>
+            <div>
+                <input type="password" name="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <details>
+                <summary>Need Help ?</summary>
+                <dl>
+                    <dd><a href="#">Forgot Password</a></dd>
+                    <dd><a href="#">Recovery Password</a></dd>
+                </dl>
+            </details>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn-login">Login</button>
+        </div>
+    </form>
+
+</body>
+</html>

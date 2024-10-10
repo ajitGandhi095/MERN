@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid d-flex justify-content-center">
+
+    <form class="mt-4 w-50 p-4 border rounded-4 border-dark">
+        <div class="h4 bi bi-person-fill">Register new user</div>
+        <div>
+            <label for="UseName" class="form-label">User Name</label>
+            <div>
+                <input type="text" name="UseName" class="form-control">
+            </div>
+        </div>
+        <div class="my-3">
+            <label for="Password" class="form-label">Password</label>
+            <div>
+                <input type="password" name="Password" class="form-control">
+            </div>
+        </div>
+        <div class="my-3">
+            <label for="Price" class="form-label">Price</label>
+            <div>
+                <input type="range" name="range" class="form-range">
+            </div>
+        </div>
+        <div class="my-3">
+            <label for="City" class="form-label">Your City</label>
+            <div>
+                <select name="City" class="form-select">
+                    <option>Select Your City</option>
+                    <option>Delhi</option>
+                    <option>Hyderabed</option>
+                    <option>Kolkata</option>
+                </select>
+            </div>
+        </div>
+        <div class="my-3">
+            <label for="Subscribe">Subscribe</label>
+            <div class="form-switch">
+                <input type="checkbox" name="Subscribe" class="form-check-input"><label class="form-check-label mx-2">Yes</label>
+            </div>
+        </div>
+        <div class="my-3 ">
+            <label for="Resume">Select Resume</label>
+            <div>
+                <input type="file" name="Resume" class="form-control-file">
+            </div>
+        </div>
+        <div><button class="btn btn-success w-100">Register</button></div>
+    </form>
+    
+</body>
+</html>

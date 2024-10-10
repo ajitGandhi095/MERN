@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inox | Javascript</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+    <style>
+        .modify {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        "use strict";
+        function getSummary()
+        {
+            document.getElementById("btnBooking").style.display= "none";
+            document.getElementById("bookingSummary").style.display= "block";
+            document.getElementById("lblMovie").innerHTML= document.getElementById("lstMovies").value;
+            document.getElementById("lblCinema").innerHTML= document.getElementById("lstCinema").value;
+            document.getElementById("lblDate").innerHTML= document.getElementById("lstDate").value;
+            document.getElementById("lblTime").innerHTML= document.getElementById("lstTime").value;
+
+            var movieName= document.getElementById("lstMovies").value;
+            if(movieName=="Devara (Part-1)") {
+                document.getElementById("imgPoster").src="../public/images/movies1.png";
+            }
+            else if(movieName=="JOKER FOLIE A DEUX") {
+                document.getElementById("imgPoster").src="../public/images/movies2.png";
+            }
+            else if(movieName=="JOKER FOLIE A DEUX") {
+                document.getElementById("imgPoster").src="../public/images/movies3.png";
+            }
+            else if(movieName=="JOKER FOLIE A DEUX") {
+                document.getElementById("imgPoster").src="../public/images/movies4.png";
+            }
+            else {
+                document.getElementById("imgPoster").src="../public/images/movies6.png";
+            }
+        }
+
+        function modifyBooking() {
+            document.getElementById("lblBooking").innerHTML= "Modify Booking";
+            document.getElementById("btnBook").innerHTML= "Save";
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    
+    <button id="btnBooking" data-bs-target="#booking" data-bs-toggle="modal" class="btn btn-primary mt-3">Quick Booking</button>
+    <div class="modal fade" id="booking">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="lblBooking" class="text-primary">Quick Booking</h3>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <select id="lstMovies" class="form-select MovieName">
+                                <option>Select Movies</option>
+                                <option>Devara (Part-1)</option>
+                                <option>JOKER FOLIE A DEUX</option>
+                                <option>SWAGGG</option>
+                                <option>SATHYAM SUNDARAM</option>
+                                <option>TUMBBAD(RE RELEASE)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" id="lstDate">
+                                <option>Select Date</option>
+                                <option>Today, 8 Oct</option>
+                                <option>Tomorrow, 9 Oct</option>
+                                <option>Thu, 10 Oct</option>
+                                <option>Fri, 11 Oct</option>
+                                <option>Sat, 12 Oct</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" id="lstCinema">
+                                <option>Select Cinema</option>
+                                <option>AAA Cinema</option>
+                                <option>PVR Panjagutta</option>
+                                <option>PVR Hyderabad</option>
+                                <option>INOX Madhapur</option>
+                                <option>INOX Jublee Hills</option>
+                                <option>CINEPOLIES Secunderabad</option>
+                                <option>AMB Cinema Miyapur</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" id="lstTime">
+                                <option>Select Timing</option>
+                                <option>10:00 AM .Hindi</option>
+                                <option>1:00 PM .Hindi</option>
+                                <option>4:00 PM .Hindi</option>
+                                <option>7:30 PM .Hindi</option>
+                                <option>10:35 PM .Hindi</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button data-bs-dismiss="modal" onclick="getSummary()" id="btnBook" class="btn btn-primary text-white">Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bookingSummary" style="display: none;" class="mt-4 w-50">
+        <h3 class="bg-dark text-white p-2">Booking Summary</h3>
+        <div class="row">
+            <img width="70%" height="200px" id="imgPoster" class="col-4">
+            <dl class="row col-5 w-50">
+                <dt class="col-6">Movie Name</dt>
+                <dd id="lblMovie" class="col-6"></dd>
+                <dt class="col-6">Cinema Name</dt>
+                <dd id="lblCinema" class="col-6"></dd>
+                <dt class="col-6">Date</dt>
+                <dd id="lblDate" class="col-6"></dd>
+                <dt class="col-6">Show Time</dt>
+                <dd id="lblTime" class="col-6"></dd>
+            </dl>
+        </div>
+        <button onclick="modifyBooking()" data-bs-target="#booking" data-bs-toggle="modal" class="btn btn-warning w-50 bi bi-pen-fill modify">Modify Booking</button>
+    </div>
+</body>
+</html>

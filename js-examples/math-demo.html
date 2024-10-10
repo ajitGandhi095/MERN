@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math | Javascript</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        "use strict";
+        function getCode()
+        {
+            var code= Math.round(Math.random() *9) + " " + Math.round(Math.random() *9) + " " + Math.round(Math.random() *9) + " " + Math.round(Math.random() *9) + " " + Math.round(Math.random() *9) + " " + Math.round(Math.random() *9);
+            document.getElementById("lblCode").innerHTML= code;
+        }
+        function bodyLoad() 
+        {
+            getCode();
+        }
+        function reLoad() 
+        {
+            getCode();
+        }
+        document.getElementById("txtCode").innerHMTL= getCode().value;
+        if(getCode()==txtCode.value) {
+            document.write("Valid Code")
+        }
+        else {
+            document.write("Invalid Code");
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyLoad()">
+    
+    <dl>
+        <h3 class="bi bi-person-fill">User Login</h3>
+        <dt>Username</dt>
+        <dd><input type="text"></dd>
+        <dt>Password</dt>
+        <dd><input type="password"></dd>
+        <dt>Verify Code <button style="border: none; background-color: white;" class="bi bi-arrow-clockwise" onclick="reLoad()"></button></dt>
+        <dd id="lblCode"></dd>
+        <dd><input type="text" id="txtCode"></dd>
+        <button class="bg-info border-info">Login</button>
+    </dl>
+
+</body>
+</html>

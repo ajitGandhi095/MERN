@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        input:read-only {
+            cursor: not-allowed;
+        }
+        input:disabled {
+            background-color: gray;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <form method="get" action="./shopper-template.html">
+        <h3>Register</h3>
+        <input type="text" name="Register"><button>Register</button>
+    </form> -->
+    <!-- <form novalidate>
+        <label for="username">User name</label>
+        <input type="text" name="username" value="Hyd123tr" readonly disabled><br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Enter Your Email"><br><br>
+        <label for="password">Password</label>
+        <input type="password" name="password"><br><br>
+        <label for="number">Number</label>
+        <input type="number" name="number"><br><br>
+        <button>Submit</button><button>Reset</button> -->
+
+        <!-- <input type="text" name="OTP" size="6" minlength="4" maxlength="4" placeholder="Enter OTP"> -->
+        <!-- <input type="text" name="OTP" size="7" minlength="4" maxlength="4" placeholder="Enter OTP" required autofocus><br><br>
+        <input type="email" name="email" placeholder="email"><br><br>
+        <input type="password" name="password" placeholder="password"><br><br>
+        <button>Submit</button> -->
+
+        <!-- <input type="text" name="search" list="terms">
+        <datalist id="terms">
+        <option>Term-1</option>
+        <option>Term-2</option>
+        </datalist> 
+    </form> -->
+    <!-- <form method="post">
+        Test: <input type="text" name="Pattern-test" pattern="colou+r" autofocus> -->
+        <!-- Test: <input type="text" name="Pattern-test" pattern=".at" autofocus> -->
+        <!-- Test: <input type="text" name="Pattern-test" pattern="red|green|blue" autofocus> -->
+        <!-- Test: <input type="text" name="Pattern-test" pattern="gmail\ .com" autofocus> 
+         <input type="password" name="password"><button>Submit</button>
+    </form> -->
+
+
+    <!-- <form method="get" action="./shopper-template.html" novalidate>
+        <h3>Register</h3>
+        <input type="password" required name="Password"><button>Submit</button>
+    </form> -->
+
+    <!-- <form>
+        <h3>Registered</h3>
+        <dl>
+            <dt>Institute</dt>
+            <dd><input type="text" name="institute" value="NareshIT" disabled></dd>
+            <dt>Course</dt>
+            <dd><input type="text" name="course" value="Python" disabled></dd>
+            <dt>User name</dt>
+            <dd><input type="text" name="UserName"></dd>
+            <dt>City</dt> 
+            <dd><input type="text" name="City"></dd>
+        </dl> -->
+
+                <!-- Placeholder -->
+        <!-- <input type="text" name="UserName" placeholder="Enter User Name">
+        <input type="text" name="Email" placeholder="Enter Your Email"> -->
+
+                <!-- Size, maxlength, minlength -->
+        <!-- <dl>
+            <dt>Your OTP</dt>
+            <dd><input type="text" name="OTP" size="6" maxlength="6" minlength="6" required autofocus></dd>
+            <dt>Comments</dt>
+            <dd><input type="text" name="Comments" maxlength="30" minlength="10"></dd>
+        </dl>
+        <button>Submit</button>
+    </form> -->
+
+    <form method="get" align="center">
+        <h3>Search</h3>
+        <div>
+            <input type="text" name="Search" list="Search" size="40">
+            <datalist id="Search">
+                <option>Html Tutorial</option>
+                <option>Html Notes</option>
+                <option>Html Projects</option>
+                <option>CSS Tutorial</option>
+                <option>CSS Notes</option>
+                <option>CSS Projects</option>
+                <option>JavaScript Tutorial</option>
+                <option>JavaScript Notes</option>
+                <option>JavaScript Projects</option>
+            </datalist>
+        </div><br>
+        <button>Search</button>
+    </form>
+</body>
+</html>

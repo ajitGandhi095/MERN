@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input | JavaScript</title>
+    <script tyep="text/javascript">
+        "use strict";
+        function bodyLoad()
+        {   
+                            // Get all the query string
+            // document.getElementById("lblName").innerHTML=location.search;
+
+                            // get string after equal
+            document.getElementById("lblName").innerHTML=location.search.slice(location.search.indexOf("="));
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    
+    <p>Hello!!<span id="lblName"></span></p>
+
+</body>
+</html>

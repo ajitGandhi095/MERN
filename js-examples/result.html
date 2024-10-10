@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result | query String</title>
+    <script type="text/javascript">
+        "use strict";
+        function bodyLoad()
+        {
+            document.getElementById("lblValue").innerHTML= location.search.slice(location.search.indexOf("=")+1);
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    
+    <h3>Showing Result for <span id="lblValue"></span></h3>
+    <a href="search.html">Back</a>
+
+</body>
+</html>

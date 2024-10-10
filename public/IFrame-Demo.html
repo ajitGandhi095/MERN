@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFrame</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        iframe {
+            border: none;
+        }
+        ul {
+            list-style: none;
+            margin-left: -30px;
+        }
+        li {
+            background-color: black;
+            color: white;
+            padding: 5px;
+            width: 120px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-family: Arial;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <h3>Templates</h3>
+            <li><a href="./shopper-template.html" target="preview">Shopper</a></li>
+            <li><a href="./netflix.html" target="preview">Netflix</a></li>
+            <li><a href="./landkit.html" target="preview">Landkit</a></li>
+            <h3>Books</h3>
+            <li><a href="./docs/BapunResume1.pdf" target="preview">PDF</a></li>
+            <li><a href="./docs/studynotion report.pdf" target="preview">PDF-2</a></li>
+            <h3>Videos</h3>
+            <li><a href="https://www.youtube.com/embed/Ad-SZFfjmys&t=1s" target="preview">Oracle</a></li>
+            <li><a href="https://www.youtube.com/embed/HHw5-W4SCVw" target="preview">Python</a></li>
+        </ul>
+    </nav>
+    <section>
+        <iframe name="preview" width="100%" height="450px"></iframe>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incline</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: sticky;
+            top: 0px;
+        }
+
+        header:hover {
+            cursor: pointer;
+        }
+
+        .border {
+            border: 1px solid rgb(187, 186, 186);
+            position: sticky;
+            margin-top: 20px;
+            top: 75px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            margin-left: 30px;
+            margin-right: 55px;
+        }
+
+        #hero {
+            background-image: url(./images/business-pic.jpg);
+            background-color: rgba(0, 0, 0, 0.5);
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            object-position: center;
+            position: relative;
+
+        }
+
+        .shade {
+            background-color: rgba(0, 0, 0, 0.4);
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        header {
+            font-weight: bold;
+            display: flex;
+            justify-content: space-evenly;
+            color: white;
+        }
+
+        .div1 {
+            margin-top: 30px;
+            margin-left: 10px;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+        }
+        .brand-border {
+            border: 1px solid gray;
+            border-left: none;
+            border-top: none;
+            border-bottom: none;
+        }
+        .brand-title {
+            font-family: arial;
+            font-size: 20px;
+            padding: 15px;
+        }
+
+        .brand-icon {
+            margin-left: 10px;
+            padding: 20px;
+            gap: 10px;
+        }
+
+        nav {
+            margin-top: 30px;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        .icon1 {
+            padding: 10px;
+        }
+
+        .nav1 {
+            padding: 15px;
+            font-size: 13px;
+            font-family: 'segoe UI';
+        }
+
+        .div3 {
+            margin-top: 30px;
+            font-family: 'segoe UI';
+            font-size: 13px;
+            margin-right: 10px;
+            text-shadow: 1px 1px 2px black;
+        }
+        .header-border {
+            border: 1px solid gray;
+            border-left: none;
+            border-top: none;
+            border-bottom: none;
+            margin-right: 12px;
+        }
+        .document {
+            padding: 15px;
+            margin-right: 15px;
+        }
+
+        .purchase {
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        .icon1:hover {
+            color: rgba(224, 175, 27, 0.703);
+            transition: 0.5s;
+        }
+
+        .nav1:hover {
+            color: rgba(224, 175, 27, 0.703);
+            transition: 0.5s;
+        }
+
+        .document:hover {
+            color: rgba(224, 175, 27, 0.703);
+            transition: 0.5s;
+        }
+
+        .purchase:hover {
+            color: rgba(224, 175, 27, 0.703);
+            transition: 0.5s;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Segoe UI;
+            height: 500px;
+        }
+
+        .line-1 {
+            margin-bottom: 15px;
+            padding: 10px;
+            color: rgb(200, 195, 195);
+            text-shadow: 1px 1px 2px black;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .line-2 {
+            margin-bottom: 17px;
+            padding: 10px;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .line-3 {
+            padding: 10px;
+            color: rgb(200, 195, 195);
+            text-shadow: 1px 1px 2px black;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .line-4 {
+            margin-bottom: 15px;
+            padding: 10px;
+            color: rgb(200, 195, 195);
+            text-shadow: 1px 1px 2px black;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .line-btn {
+            background-color: transparent;
+            color: rgb(244, 233, 233);
+            padding: 15px;
+            border: 1px solid rgb(188, 124, 6);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .line-btn:hover {
+            cursor: pointer;
+        }
+
+        .section1 {
+            /* height: 100vh; */
+            width: 100vw;
+        }
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            font-family: Arial;
+        }
+
+        .title-name1 {
+            font-size: 30px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .title-name2 {
+            color: gray;
+            font-size: 16px;
+            padding: 5px;
+        }
+
+        .title-name3 {
+            color: gray;
+            font-size: 16px;
+            padding: 5px;
+        }
+
+        .img {
+            display: flex;
+            flex-direction: column;
+            margin-top: -60px;
+        }
+
+        .section-img {
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+        }
+
+        .img-left {
+            margin-left: 50px;
+        }
+
+        .img-middle {
+            margin-left: 20px;
+        }
+
+        .img-top {
+            margin-top: 40px;
+        }
+
+        .img-title {
+            margin-top: 30px;
+            margin-left: 20px;
+            padding: 10px;
+            font-size: 20px;
+            font-family: Arial;
+            font-weight: 200;
+        }
+
+        .img-Subtitle {
+            margin-left: 20px;
+            padding: 10px;
+            font-family: Arial;
+            color: gray;
+        }
+
+        .second-line {
+            margin-top: 15px;
+        }
+
+        .img8-title {
+            color: lightgray;
+        }
+
+        .img8-subtitle {
+            color: lightgray;
+        }
+
+        .img-animation:hover {
+            cursor: pointer;
+        }
+
+        .image-animation:hover {
+            cursor: default;
+        }
+
+        .new {
+            height: 900px;
+            background-color: rgb(212, 21, 21);
+            color: white;
+            padding: 3px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        footer {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            margin-top: 80px;
+            height: 300px;
+            background-color: rgb(79, 79, 79);
+            color: white;
+        }
+
+        .left-grid {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 80px;
+        }
+
+        .footer-brand-title {
+            font-size: 25px;
+            font-weight: bold;
+            font-family: Arial;
+            margin-top: -30px;
+        }
+
+        .copyright {
+            font-size: 13px;
+            font-family: Arial;
+            margin-top: 25px;
+            color: rgb(188, 184, 184);
+        }
+
+        .right-grid {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: end;
+            margin-right: 80px;
+        }
+
+        .footer-link {
+            margin-top: -40px;
+            font-size: 16px;
+            font-family: Arial;
+        }
+
+        .footer-link a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-hover:hover {
+            text-decoration: underline;
+        }
+
+        .footer-link-middle {
+            margin-left: 10px;
+            margin-right: 15px;
+        }
+
+        .footer-icon {
+            margin-top: 25px;
+            color: rgb(240, 174, 6);
+        }
+
+        .bi-twitter {
+            margin-left: 15px;
+        }
+
+        .bi-instagram {
+            margin-left: 20px;
+        }
+        .section2 {
+            height: 400px;
+        }
+        /* .section2-border{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid rgb(240, 174, 6);
+            border-right: none;
+            border-top: none;
+            border-bottom: none;
+            margin-left: 50px;
+        } */
+         .section2-title {
+            margin-top: 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+         }
+         .section2-First-title{
+            margin-bottom: 30px;
+         }
+         .section2-second-subtitle {
+            margin-left: 100px;
+         }
+    </style>
+</head>
+<body">
+    <div class="shade"> </div>
+    <section id="hero">
+        <header>
+            <div class="div1">
+                <span class="brand-title">
+                    <span class="bi bi-flag-fill"></span>
+                    <span>incline.</span>
+                </span>
+                <span class="brand-border"></span>
+                <span class="brand-icon">
+                    <span class="icon1"><span class="bi bi-github"></span></span>
+                    <span class="icon1"><span class="bi bi-twitter"></span></span>
+                    <span class="icon1"><span class="bi bi-instagram"></span></span>
+                </span>
+            </div>
+            <div>
+                <nav>
+                    <span class="nav1">WELCOME <span class="bi bi-caret-down-fill"></span></span>
+                    <span class="nav1">LANDINGS <span class="bi bi-caret-down-fill"></span></span>
+                    <span class="nav1">PAGES <span class="bi bi-caret-down-fill"></span></span>
+                    <span class="nav1">COMPONENTS <span class="bi bi-caret-down-fill"></span></span>
+                </nav>
+            </div>
+            <div class="div3">
+                <span class="document">DOCUMENT</span>
+                <span class="header-border"></span>
+                <span class="purchase">PURCHASE NOW</span>
+            </div>
+        </header>
+        <div class="border"></div>
+        <section>
+            <main>
+                <span class="line-1">By Simpleqode</span>
+                <span class="line-2">Landing pages for any occasion</span>
+                <span class="line-3">Incline is set of landing and support pages aimed at helping companies
+                    promote</span>
+                <span class="line-4">new products and business launches.</span>
+                <button class="line-btn">PURCHASE NOW</button>
+            </main>
+        </section>
+    </section>
+    <section>
+                <!-- First Section -->
+        <div class="section1">
+            <div class="title">
+                <span class="title-name1">Landing page variants</span>
+                <span class="title-name2">Incline comes with several professionally designed landing pages that</span>
+                <span class="title-name3">can be easily adapted for any project.</span>
+            </div>
+            <div class="section-img">
+                <div class="img img-left img-animation">
+                    <img src="./images/incline-img1.PNG" width="350px" height="200px">
+                    <span class="img-title">App landing</span>
+                    <span class="img-Subtitle">You can use this page to promote your web or mobile application</span>
+                </div>
+                <div class="img img-middle img-animation">
+                    <img src="./images/incline-img2.PNG" width="350px" height="200px">
+                    <span class="img-title">Company landing <span class="new">New!</span></span>
+                    <span class="img-Subtitle">You can use this page to promote<br> <span class="second-line">your
+                            company</span>
+                </div>
+                <div class="img img-right img-animation">
+                    <img src="./images/incline-img3.PNG" width="350px" height="200px">
+                    <span class="img-title">Fullpage scrolling</span>
+                    <span class="img-Subtitle">A landing page created with <br>fullscreen scrolling sections.</span>
+                </div>
+                <div class="img img-left img-top img-animation">
+                    <img src="./images/incline-img4.PNG" width="350px" height="200px">
+                    <span class="img-title">Product landing</span>
+                    <span class="img-Subtitle">You can use this page to promote <br> your product or a store</span>
+                </div>
+                <div class="img img-middle img-top img-animation">
+                    <img src="./images/incline-img5.PNG" width="350px" height="200px">
+                    <span class="img-title">Real estate landing</span>
+                    <span class="img-Subtitle">You can use this page to promote <br> your real estate.</span>
+                </div>
+                <div class="img img-right img-top img-animation">
+                    <img src="./images/incline-img6.PNG" width="350px" height="200px">
+                    <span class="img-title">Restaurant landing <span class="new">New!</span></span>
+                    <span class="img-Subtitle">You can use this page to promote <br> your restaurant.</span>
+                </div>
+                <div class="img img-left img-top img-animation">
+                    <img src="./images/incline-img7.PNG" width="350px" height="200px">
+                    <span class="img-title">Service landing</span>
+                    <span class="img-Subtitle">You can use this page to promote <br> your business or a service.</span>
+                </div>
+                <div class="img img-middle img-top">
+                    <img src="./images/incline-img8.PNG" width="350px" height="200px">
+                    <span class="img-title img8-title image-animation">Coming soon</span>
+                    <span class="img-Subtitle img8-subtitle image-animation">Feel free to contact us with your ideas
+                        about new pages and components.</span>
+                </div>
+            </div>
+        </div>
+
+                        <!-- Second Section  -->
+        <div class="section2">
+            <!-- <div class="section2-border"></div> -->
+            <div class="section2-title">
+                <div class="section2-First-title">Header variants</div>
+                <div>Polish your landing page with one of the header options below to <br><span class="section2-second-subtitle">impress your visitors at first glance.</span></div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="left-grid">
+            <div class="footer-brand-title">
+                <span class="bi bi-flag-fill"></span>
+                <span>incline.</span>
+            </div>
+            <div class="copyright">
+                <span>&copy; Copyright 2024 Simpleqode. All rights reserved.</span>
+            </div>
+        </div>
+        <div class="right-grid">
+            <div class="footer-link">
+                <a href="#" class="footer-hover">Terms and conditions</a>
+                <a href="#" class="footer-link-middle footer-hover">Privacy Policy</a>
+                <a href="#" class="footer-hover">Contact us</a>
+            </div>
+            <div class="footer-icon">
+                <span class="bi bi-github"></span>
+                <span class="bi bi-twitter"></span>
+                <span class="bi bi-instagram"></span>
+            </div>
+        </div>
+    </footer>
+
+    </body>
+
+</html>

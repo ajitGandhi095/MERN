@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semantic Tag</title>
+    <style>
+        h1{
+            font-weight: unset;
+            font-size: unset;
+            display: block;
+
+            /* all: unset; */
+        }
+        blockquote {
+            text-indent: 100px;
+        }
+        div p::first-letter {
+            font-size: 45px;
+            font-weight: bold;
+            font-family: arial;
+            float: left;
+            line-height: 30px;
+        }
+        .p1{
+            line-height: 40px;
+            letter-spacing: 2px;
+            word-spacing: 10px;
+        }
+        .p2 {
+            text-align: justify;
+            word-break: break-all;
+        }
+        .scrollbar{
+            height: 200px;
+            width: 300px;
+            border: 1px solid black;
+            padding: 10px;
+            overflow: auto;
+            text-align: justify;
+            word-break: break-all;
+        }
+        .ellipsis {
+            width: 300px;
+            border: 1px solid black;
+            padding: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .columns {
+           columns: 4;
+           column-gap: 20px;
+           column-width: 200px;
+           column-rule: 1px dotted gray;
+           text-align: justify;
+           word-break: break-all;
+        }
+    
+    </style>
+</head>
+<body>
+
+            <!-- Pre Tag -->
+    <pre>
+        Text in a pre element
+        is displayed in a fixed-width
+        font, and it preserves
+        both spaces and
+        line breaks
+    </pre>
+    <pre>
+        L          TE
+    A       A
+      C    V
+       R A
+       DOU
+       LOU
+      REUSE
+      QUE TU
+      PORTES
+    ET QUI T'
+    ORNE O CI
+     VILISÉ
+    OTE-  TU VEUX
+     LA    BIEN
+    SI      RESPI
+            RER       - Apollinaire
+    </pre>
+
+            <!-- code Tag -->
+    <code>
+        #include<stdio.h>
+        
+        int main() {
+        
+            return 0;
+        }
+        
+    </code><br><br>
+    
+          <!-- br Tag -->
+    HTML Stands for Hyper Text<br/> Markup Language <br><br>
+
+          <!-- Blank Space -->
+    H &nbsp;TML Stand for Hyper Text Markup Language<br><br>
+          
+          <!-- sample Tag -->
+    Lorem ipsum dolor sit amet consectetur <samp>adipisicing elit</samp>. Ad ullam eveniet, vel dignissimos quisquam optio, harum, aperiam ipsam iste consequuntur excepturi. Pariatur <samp>minima ad ipsum libero</samp> sunt doloremque laboriosam error!<br>
+    Write a program to print <samp>Hello ! World</samp><br>
+
+            <!-- big and small Tag -->
+    <small>Create Hello World</small><br>
+    <big>Hello World !!</big>
+
+            <!-- Heading Tag -->
+    <h1>Heading -1</h1>
+    <h2>Heading-2</h2>
+    <h3>Hedaing-3</h3>
+    <h4>Heading-4</h4>
+    <h5>Heading-5</h5>
+    <h6>Heading-6</h6>
+    <!-- <h7>Heading-7</h7> ------This is Considered as paragraph -->
+
+            <!-- paragraph and bolckquote -->
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non velit sapiente perferendis dicta illum, voluptate vel cum et porro, maiores ex tempora ab debitis pariatur, neque omnis alias facilis eos?Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias natus amet unde quo velit iure, animi ullam minima error? Iusto, veniam at. Maiores sed fugit neque fugiat quia aliquid minima. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam enim esse amet similique eveniet recusandae sit asperiores possimus. Nostrum, laborum assumenda. Eos quod beatae enim temporibus consequuntur ullam vitae voluptatibus.
+    </p>
+    <blockquote>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum excepturi reiciendis aliquid modi labore vitae. Tempore minus vitae iste qui enim nobis voluptatibus at voluptatum aspernatur unde quod facilis, nihil atque delectus inventore amet perspiciatis! Non repellendus illum, exercitationem commodi aliquid ea placeat fugit temporibus officia modi iusto dicta vel maxime obcaecati alias sed repellat ducimus, minus necessitatibus? Aliquam inventore amet voluptas quae cum quod. Reiciendis cumque pariatur amet veniam saepe quam itaque non obcaecati sunt perferendis. Deserunt molestias omnis saepe alias quisquam sequi, aliquam voluptatibus tenetur suscipit eum veniam eaque laborum officia. Impedit ad porro iste consectetur unde exercitationem?
+    </blockquote>
+
+            <!-- Dropcap -->
+    <div class="div1">
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat mollitia quis nam incidunt eveniet hic quam culpa et, assumenda voluptates similique vel beatae suscipit. Dolor minima alias porro exercitationem adipisci, tenetur maxime fuga unde culpa, id soluta placeat laudantium quia! Expedita rerum reiciendis repudiandae asperiores explicabo ipsam pariatur repellendus, debitis praesentium suscipit atque voluptatem facilis ut amet? Dolorem, incidunt? Officiis, iste corrupti! Impedit sed, voluptatem unde dolores error suscipit mollitia itaque distinctio nulla officiis neque praesentium voluptatum aspernatur repellendus rerum repudiandae amet quas esse at laudantium saepe! Omnis voluptate dolorem tempore voluptas, totam consequuntur aliquid aut officiis eveniet dignissimos distinctio?
+        </p>
+    </div>
+
+            <!-- Space between line, word & space -->
+    <p class="p1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione fugiatquisquam sed omnis. Molestias voluptates placeat, perferendis illum fugaquisquam ab vero commodi officiis voluptatum. Fuga optio modi voluptatumfacilis! Impedit, adipisci voluptatibus? Deserunt, vel optio consequatur eiusillum quas, rem sed earum velit, mollitia voluptate. Odio, porro quas!Recusandae tempora aspernatur voluptas voluptatibus perferendis impedit.Deserunt exercitationem soluta quam ut. Non iure explicabo, quas ullamprovident atque voluptates officia molestias maiores dolorum itaque odit! Estincidunt aliquam sed officiis harum eveniet! Quam temporibus quibusdamexercitationem eius similique accusamus ea laborum debitis magni non,architecto officia illum itaque! Repellat, a.
+    </p>
+
+            <!-- Line Break -->
+    <p class="p2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita rem accusamus doloribus corporis in. Voluptatem tempora sapiente reprehenderit rem cumque. Porro molestiae placeat nostrum adipisci vitae debitis, autem nisi! Necessitatibus consequuntur deleniti porro corrupti nihil iusto eum. Maxime laudantium error nemo ex sint fuga officia accusantium nulla praesentium dicta asperiores beatae temporibus reprehenderit suscipit quod molestias veritatis explicabo deserunt similique hic, id pariatur amet, eligendi porro. Blanditiis dignissimos, maxime aperiam accusamus numquam quod quidem assumenda voluptatem dolorum incidunt voluptas praesentium animi eligendi, earum autem ducimus odio, sit corporis consequatur consequuntur atque facere esse? Molestias explicabo sequi harum eum nesciunt id vitae quos ipsa, delectus laborum placeat unde architecto eligendi odio? Molestias saepe omnis doloribus, debitis fugit ullam? Mollitia, impedit. Accusamus iusto, quae aliquid eos omnis numquam exercitationem ullam totam dolorum amet atque cum repellendus quia saepe nulla et incidunt provident. Porro nisi illum placeat saepe nostrum sed nam atque explicabo.
+    </p>
+
+            <!-- Scrollbar -->
+    <p class="scrollbar">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit dicta a est dolorem distinctio laudantium, impedit maxime quasi blanditiis molestiae asperiores porro, eius dignissimos similique consectetur cumque ratione tempore commodi iusto ab culpa accusamus tenetur possimus libero. Est, nobis quisquam. Mollitia vel, quibusdam itaque, blanditiis animi veritatis, voluptas officiis atque reiciendis rerum libero sit. Cupiditate facilis soluta laudantium eius! Optio quisquam voluptatum dignissimos minima, quo velit possimus dolore libero non quas voluptatibus sit doloremque, vitae mollitia odio eaque pariatur eos. Ad ut perferendis dolor accusamus quos numquam error, voluptatem, rem quibusdam temporibus illo odit est fuga ullam natus cupiditate illum magnam, facere consectetur repellendus suscipit atque? Nulla aliquid eum incidunt, ad qui nesciunt obcaecati itaque exercitationem mollitia iste quidem non odit quam suscipit voluptates consequuntur totam. Modi sapiente dolorem doloribus tempore fugiat in laborum cumque nisi ut enim ex eum beatae magni, reiciendis laudantium earum officia veritatis iusto quas omnis illum inventore corporis. Quos quam nihil ipsum sunt id assumenda consequatur quidem officiis aperiam officia fuga, facere culpa qui! Repellendus laudantium ut dicta necessitatibus deserunt saepe ratione similique labore officia excepturi, corporis possimus vero reiciendis fugiat itaque. Aspernatur sapiente error vel, expedita reprehenderit omnis recusandae, aliquid illo atque accusantium quo.
+    </p>
+
+        <!-- ellipsis -->
+    <p class="ellipsis" title="tempora cumque dolores id adipisci provident reiciendis excepturi repellendus tempore nesciunt quas et repudiandae aliquam, distinctio explicabo laboriosam! Minus facilis ab laboriosam ex accusantium fugiat recusandae itaque provident, dolor blanditiis. Nam nostrum commodi est sit amet nulla cum repellendus ex consectetur odit numquam aspernatur, itaque neque optio illo! Veniam facilis necessitatibus minima, deserunt qui quam dolorum saepe officia consequatur, inventore, temporibus ratione quae. Cumque ipsum commodi autem exercitationem natus optio esse? Molestiae enim aspernatur error beatae quia voluptates velit! Amet quae repellat quibusdam impedit, reprehenderit officiis. Aspernatur eos adipisci illum velit laborum nesciunt nihil aliquid dignissimos. Veritatis voluptates quia vel repellendus quisquam labore quibusdam, ut dolor hic expedita, veniam assumenda ipsa quos illo nemo eum delectus officiis porro commodi rerum. Dolorum eius fuga, rerum accusamus, dicta optio exercitationem quis eum facilis facere, cupiditate molestiae quas quisquam!">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo natus voluptas dolor, quod magnam, tempora cumque dolores id adipisci provident reiciendis excepturi repellendus tempore nesciunt quas et repudiandae aliquam, distinctio explicabo laboriosam! Minus facilis ab laboriosam ex accusantium fugiat recusandae itaque provident, dolor blanditiis. Nam nostrum commodi est sit amet nulla cum repellendus ex consectetur odit numquam aspernatur, itaque neque optio illo! Veniam facilis necessitatibus minima, deserunt qui quam dolorum saepe officia consequatur, inventore, temporibus ratione quae. Cumque ipsum commodi autem exercitationem natus optio esse? Molestiae enim aspernatur error beatae quia voluptates velit! Amet quae repellat quibusdam impedit, reprehenderit officiis. Aspernatur eos adipisci illum velit laborum nesciunt nihil aliquid dignissimos. Veritatis voluptates quia vel repellendus quisquam labore quibusdam, ut dolor hic expedita, veniam assumenda ipsa quos illo nemo eum delectus officiis porro commodi rerum. Dolorum eius fuga, rerum accusamus, dicta optio exercitationem quis eum facilis facere, cupiditate molestiae quas quisquam!
+    </p>
+
+            <!-- Screen tips -->
+    <span title="Hyper Text Markup Language">HTML</span>
+
+            <!-- Columns -->
+    <p class="columns">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi corporis perferendis nemo a velit illum perspiciatis facere vel amet libero. Ex consequatur, repudiandae voluptatibus necessitatibus, consectetur fuga molestias quas est impedit expedita rem! Voluptatum mollitia illo non voluptates est quisquam vitae porro in incidunt soluta optio, facilis quae similique, minima a. Quae, vel dicta sapiente ipsa dignissimos, incidunt nostrum obcaecati minus dolorem aspernatur ut velit perspiciatis earum, sed dolorum odit magnam deserunt provident voluptate! Quas eum commodi sit. Eum culpa aperiam dignissimos reiciendis labore obcaecati. Doloribus assumenda velit illum distinctio alias. Deserunt expedita, provident temporibus ullam vel animi repellat quasi?
+    </p>
+
+            <!-- Text-Formatting -->
+    <!-- <font size:"6">HTML</font> -->
+    <b>This is a HTML page</b><br><br>  <!--This is design element -->
+    <strong>This is a HTML page</strong><br><br> <!--This is review element -->
+
+    <i>This is a HTML page</i><br><br>
+    <em>This is a HTML page</em><br><br>
+
+    <u>This is a HTML page</u><br><br>
+    <ins>This is a HTML page</ins><br><br>
+
+    <strike>This is a HTML page</strike><br><br>
+    <del>This is a HTML page</del><br><br>
+
+    (a+b)<sup>2</sup> = (a<sup>2</sup>+b<sup>2</sup>+2ab)<br><br>
+    H<sub>2</sub>0
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    
+    <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#login">Login</button>
+    <a data-bs-toggle="modal" href="#offers" class="btn btn-warning mt-3 ms-3">Offers</a>
+    <div class="modal fade" id="login">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="bi bi-person-fill">User Login</h3>
+                    <button class="btn btn-close " data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                        <dt>UserName</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>Password</dt>
+                        <dd><input type="password" class="form-control"></dd>
+                        <dt>Confirm Password</dt>
+                        <dd><input type="password" class="form-control"></dd>
+                        <dt>Email</dt>
+                        <dd><input type="email" class="form-control"></dd>
+                        <dt>Mobile Number</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>Present Address</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>Native Address</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>10th Percentage</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>12th Percentage</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>Degree Percentage</dt>
+                        <dd><input type="text" class="form-control"></dd>
+                        <dt>Upload your Photo</dt>
+                        <dd><input type="file" class="form-control"></dd>
+                        <dt>Upload your Resume</dt>
+                        <dd><input type="file" class="form-control"></dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning">Login</button>
+                    <button class="btn btn-danger ms-2" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                   <!-- Modal-2 -->
+    <div class="modal fade" id="offers">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Festival Sale</h2>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                    <div>
+                        <img src="../public/images/Woman-Fashion.jpg" width="150px" height="200px">
+                        <button class="btn btn-dark bi bi-eye mt-2 ms-3">Viwe Offers</button>
+                    </div>
+                    <div>
+                        <img src="../public/images/Men-Fashion.jpg" width="150px" height="200px">
+                        <button class="btn btn-dark bi bi-eye mt-2 ms-3">Viwe Offers</button>
+                    </div>
+                    <div>
+                        <img src="../public/images/Kid-Fashion.jpg" width="150px" height="200px">
+                        <button class="btn btn-dark bi bi-eye mt-2 ms-3">Viwe Offers</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon | Signin</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            font-family: Arial;
+        }
+        .main-form{
+            height: 390px;
+            width: 350px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .sign-in {
+            font-size: 30px;
+            margin-left: 14px;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        .form-group {
+            padding: 5px;
+            margin-left: 19px;
+        }
+        #border {
+            border: 1px solid rgb(227, 224, 224);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            margin-left: 23px;
+            margin-right: 20px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .form-label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 90%;
+            height: 24px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid gray;
+
+        }
+        .btn-continue{
+            width: 90%;
+            height: 30px;
+            padding: 5px;
+            font-size: 15px;
+            background-color: gold;
+            border: none;
+            border-radius: 10px;
+        }
+        p{
+            font-size: 12px;
+        }
+        a{
+            color: rgb(16, 104, 199);
+        }
+        a:hover {
+            cursor: pointer;
+            color: rgb(191, 107, 3);
+        }
+        summary{
+            font-size: 13px;
+        }
+        #buying-work {
+            font-size: 13px;
+            font-weight: bold;
+        }
+        #shop-amazon {
+            font-size: 13px;
+           
+        }
+        #shop {
+            text-decoration: none;
+        }
+        #shop:hover{
+            text-decoration: underline;
+        }
+        #need-help {
+            text-decoration: none;
+        }
+        #need-help:hover {
+            text-decoration: underline;
+        }
+        dd {
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        dl {
+            height: 10px;
+        }
+        fieldset {
+            margin-top: 20px;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            font-size: 12px;
+            color: gray;
+        }
+        #create-btn {
+            width: 350px;
+            height: 30px;
+            padding: 5px;
+            border-radius: 7px;
+            border: 1px solid rgb(216, 214, 214);
+            background: transparent;
+            box-shadow: 0.5px 0.5px 0.5px  rgb(205, 204, 204);
+        }
+        #create-btn:hover {
+            cursor: pointer;
+            background-color: rgb(227, 226, 226);
+        }
+    </style>
+</head>
+<body>
+
+    <div><img src="./images/amazon-signin.PNG" height="50px" width="120px"></div>
+    <form class="main-form">
+        <div class="sign-in">Sign in</div>
+        <div class="form-group">
+            <label for="email/phone" class="form-label">Email or mobile phone number</label>
+            <div>
+                <input type="text" name="email/phone">
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn-continue">Continue</button>
+        </div>
+        <div class="form-group">
+            <p>By continuing, you agree to Amazon's <a href="https://www.amazon.in">Conditions of Use</a> and <a href="https://www.amazon.in"> Privacy Notice</a>.</p>
+        </div>
+        <div class="form-group">
+            <details>
+                <summary><a href="https://www.amazon.in" id="need-help">Need help?</a></summary>
+                <dl>
+                    <dd><a href="https://www.amazon.in" id="need-help">Forgot your password?</a></dd>
+                    <dd><a href="https://www.amazon.in" id="need-help">Other issues with Sign-In</a></dd>
+                </dl>
+            </details>
+        </div>
+        <div class="form-group" id="border"></div>
+        <div class="form-group" id="buying-work">Buying for work?</div>
+        <div class="form-group" id="shop-amazon"><a href="https://www.amazon.in" id="shop">Shop on Amazon Business</a></div>
+    </form>
+    <div>
+        <fieldset>
+            <legend>New to Amazon?</legend>
+        </fieldset>
+    </div>
+    <form>
+        <div>
+            <button type="submit" id="create-btn">Create your Amazon account</button>
+        </div>
+    </form>
+
+</body>
+</html>

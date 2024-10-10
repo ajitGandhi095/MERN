@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            font-family: 'Segoe UI';
+            font-size: 22px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: baseline;
+        }
+        .brand-title {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        nav span {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .shortcuts span {
+            margin-right: 5px;
+        }
+        article {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-family: Segoe UI;
+        }
+        .bi-lightning-fill{
+            color: goldenrod;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI';
+            padding: 20px;
+            height: 400px;
+        }
+        .row-1 {
+            text-align: center;
+        }
+        .footer-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .row-2 {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .email {
+            display: inline-block;
+            padding: 20px;
+            background-color: #444;
+            color: #aaa;
+            width: 300px;
+            text-align: left;
+        }
+        .subscribe {
+            display: inline-block;
+            padding: 20px;
+            background-color: #666;
+            width: 110px;
+            margin-left: 14px;
+            font-weight: bold;
+            font-family: 'Segoe UI';
+
+        }
+        .row-3 {
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            margin-top: 60px;
+            margin-left: 130px;
+        }
+        .col span{
+            display: block;
+        }
+        .col-title {
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-left: 5px;
+            width: 100px;
+            font-size: 18px;
+        }
+        .sub-title {
+            padding: 4px;
+            color: #bbb;
+            font-family: sans-serif;
+            width: 170px;
+        }
+        aside span {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 2px;
+            margin-left: 5px;
+        }
+        .brand-footer {
+            margin-right: 40px;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            height: 450px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .woman-fashion {
+            background-image: url("../public/images/Woman-Fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            opacity: 0.7;
+        }
+        .men-fashion {
+            background-image: url("../public/images/Men-Fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            opacity: 0.7;
+        }
+        .kid-fashion {
+            background-image: url("../public/images/Kid-Fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            opacity: 0.7;
+        }
+        .main-title {
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: 'segoe UI';
+            text-shadow: 2px 2px 2px black;
+        }
+        .btn-shop {
+            background-color: white;
+            padding: 10px;
+            font-family: 'segoe UI';
+            width: 130px;
+            text-align: center;
+        }
+        .woman-fashion:hover {
+            opacity: 1;
+            transition: 0.6s;
+        }
+        .men-fashion:hover {
+            opacity: 1;
+            transition: 0.6s;
+        }
+        .kid-fashion:hover {
+            opacity: 1;
+            transition: 0.6s;
+        }
+        .icon-images {
+            display: flex;
+            margin-left: 50px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            width: 1200px;
+        }
+        .first-icon {
+            display: flex;
+        }
+        .title{
+            margin-left: 20px;
+            font-size: 16px;
+            font-family: 'segoe-UI';
+        }
+        .sub-title {
+            margin-left: 15px;
+            color: gray;
+            font-family: 'segoe-UI';
+            font-size: 14px;
+        }
+        .second-icon{
+            display: flex;
+            margin-left: 70px;
+        }
+        .third-icon {
+            display: flex;
+            margin-left: 80px;
+        }
+        .fourth-icon {
+            display: flex;
+            margin-left: 70px;
+        }
+        .border {
+            border: 1px solid rgb(227, 227, 227);
+            margin-bottom: 60px;
+            margin-left: 30px;
+            margin-right: 70px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        .section-2-title {
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section2-title1 {
+            font-size: 16px;
+            font-family: 'century Gothic';
+            color: gray;
+        }
+         .section2-title2 {
+            margin-top: 7px;
+            font-size: 30px;
+            font-family: 'century Gothic';
+            font-weight: bold;
+         }
+         .section2-title3 {
+            width: 550px;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-left: 40px;
+            font-family: 'century Gothic';
+            color: rgb(70, 69, 69);
+         }
+         .section2-title3-sub {
+            color: rgb(70, 69, 69);
+            font-family: 'century Gothic';
+            font-size: 15px;
+            margin-top: 7px;
+         }
+         .woman-bag-fashion {
+            height: 400px;
+            width: 340px;
+            background-image: url("../public/images/women-bag.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            margin-left: 50px;
+            margin-top: 30px;
+         }
+         .img-1-main-title {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'century Gothic';
+            text-shadow: 1px 1px 2px black;
+         }
+         .section-2-img {
+            display: flex;
+            margin-left: 30px;
+         }
+         .img-1-btn-shop {
+            color: white;
+            text-shadow: 2px 2px 3px black;
+            padding: 10px;
+            font-family: 'century Gothic';
+            width: 130px;
+            text-align: center;
+         }
+         .woman-bag-fashion:hover {
+            cursor: pointer;
+            opacity: 1;
+            transition: 0.6s;
+         }
+         .men-printed-shirt-fashion {
+            height: 400px;
+            width: 740px;
+            background-image: url("../public/images/men-printed-shirt.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            margin-top: 30px;
+         }
+         .img-2-main-title {
+            color: black;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'century Gothic';
+            text-shadow: 1px 1px 2px rgb(244, 239, 239);
+            margin-left: 40px;
+         }
+         .img-2-btn-shop {
+            color: black;
+            text-shadow: 1px 1px 2px rgb(244, 239, 239);
+            padding: 10px;
+            font-family: 'century Gothic';
+            width: 130px;
+            text-align: center;
+            margin-left: 15px;
+         }
+         .men-printed-shirt-fashion:hover {
+            cursor: pointer;
+            opacity: 1;
+            transition: 0.6s;
+         }
+         .offer {
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            top: -140px;
+            /* right: -0px; */
+            right: 30px;
+            background-color: rgb(244, 102, 102);
+            border-radius: 60px;
+            padding: 12px;
+            text-align: center;
+         }
+         .men-offer {
+            position: relative;
+         }
+         .offer-title {
+            font-size: 25px;
+            font-family: 'century Gothic';
+            font-weight: bold;
+            color: white;
+         }
+         .offer-subtitle {
+            font-size: 13px;
+            font-family: 'century Gothic';
+            font-weight: bold;
+            color: white;
+         }
+         .secion-2-img2 {
+            display: flex;
+            margin-left: 30px;
+         }
+         .women-basic-fashion {
+            height: 400px;
+            width: 740px;
+            background-image: url("../public/images/basic-womendress.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            margin-left: 50px;
+            margin-top: 5px;
+         }
+         .women-basic-fashion:hover {
+            cursor: pointer;
+            opacity: 1;
+            transition: 0.6s;
+         }
+         .woman-sweatshirt {
+            height: 400px;
+            width: 340px;
+            background-image: url("../public/images/women-sweatshirts.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            margin-top: 5px;
+         }
+         .woman-sweatshirt:hover {
+            cursor: pointer;
+            opacity: 1;
+            transition: 0.6s;
+         }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <span class="brand-title">Shopper.</span>
+        </div>
+        <div>
+           <nav>
+                <span>Home</span>
+                <span>Catelog</span>
+                <span>Shop</span>
+                <span>Pages</span>
+                <span>Blog</span>
+                <span>Docs</span>
+           </nav>
+        </div>
+        <div class="shortcuts">
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart"></span>
+        </div>
+    </header>
+
+    <section>
+        <article>
+            <span class="bi bi-lightning-fill"></span>
+            <span>HAPPY HOLIDAY DEALS ON EVERYTHING</span>
+            <span class="bi bi-lightning-fill"></span>
+        </article>
+        <main>
+            <div class="woman-fashion">
+                <div class="main-title">Women</div>
+                <div class="btn-shop">Shop Women <span class="bi bi-arrow-right"></span></div>
+            </div>
+            <div class="men-fashion">
+                <div class="main-title">Men</div>
+                <div class="btn-shop">Shop Men <span class="bi bi-arrow-right"></span></div>
+            </div>
+            <div class="kid-fashion">
+                <div class="main-title">Kids</div>
+                <div class="btn-shop">Shop Kids <span class="bi bi-arrow-right"></span></div>
+            </div>
+        </main>
+        <div class="icon-images">
+            <div class="first-icon">
+                <span class="bi bi-truck"></span>
+                <div>
+                    <div class="title">Free shipping</div>
+                    <div class="sub-title">From all orders over $100</div>
+                </div>
+            </div>
+            <div class="second-icon">
+                <span class="bi bi-arrow-left-right"></span>
+                <div>
+                    <div class="title">Free returns</div>
+                    <div class="sub-title">Return money within 30 days</div>
+                </div>
+            </div>
+            <div class="third-icon">
+                <span class="bi bi-lock-fill"></span>
+                <div>
+                    <div class="title">Secure shopping</div>
+                    <div class="sub-title">You're in safe hands</div>
+                </div>
+            </div>
+            <div class="fourth-icon">
+                <span class="bi bi-pencil-fill"></span>
+                <div>
+                    <div class="title">Over 10,000 Styles</div>
+                    <div class="sub-title">We have everything you need</div>
+                </div>
+            </div>
+        </div>
+        <div class="border"></div>
+                <!-- Second Section -->
+        <div class="section-2">
+            <div class="section-2-title">
+                <div class="section2-title1">New Collection</div>
+                <div class="section2-title2">Best Picks 2019</div>
+                <div class="section2-title3">Appear, dry there darkness they're seas, dry waters thing fly midst. Beast,</div>
+                <div class="section2-title3-sub">above fly brought Very green.</div>
+            </div>
+            <div class="section-2-img">
+                <div class="woman-bag-fashion">
+                    <div class="img-1-main-title">Bag's Collection</div>
+                    <div class="img-1-btn-shop">Shop Now <span class="bi bi-arrow-right"></span></div>
+                </div>
+                <div class="men-printed-shirt-fashion">
+                    <div class="men-offer">
+                        <div class="offer"><span class="offer-subtitle">Save</span> <span class="offer-title">30%</span></div>
+                    </div>
+                    <div class="img-2-main-title">Printed Men's Shirts</div>
+                    <div class="img-2-btn-shop">Shop Now <span class="bi bi-arrow-right"></span></div>
+                </div>
+            </div>
+            <div class="secion-2-img2">
+                <div class="women-basic-fashion">
+                    <div class="img-2-main-title">Basic Women's Dresses</div>
+                    <div class="img-2-btn-shop">Shop Now <span class="bi bi-arrow-right"></span></div>
+                </div>
+                <div class="woman-sweatshirt">
+                    <div class="img-1-main-title">Sweatshirts</div>
+                    <div class="img-1-btn-shop">Shop Now <span class="bi bi-arrow-right"></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="row-1">
+            <span class="footer-title">Want style Ideas and Treats?</span>
+        </div>
+        <div class="row-2">
+            <span class="email">Enter Email*</span>
+            <span class="subscribe">Subscribe</span>
+        </div>
+        <div class="row-3">
+            <div class="brand-footer">
+                <span class="brand-title">Shopper.</span>
+                <aside>
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-youtube"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-instagram"></span>
+                    <span class="bi bi-linkedin"></span>
+                </aside>
+            </div>
+            <div class="col">
+                <span class="col-title">Support</span>
+                <span class="sub-title">Contact Us</span>
+                <span class="sub-title">FAQs</span>
+                <span class="sub-title">Size Guide</span>
+                <span class="sub-title">Shipping & Returns</span>
+            </div>
+            <div class="col">
+                <span class="col-title">Shop</span>
+                <span class="sub-title">Men's Shopping</span>
+                <span class="sub-title">Women's Shopping</span>
+                <span class="sub-title">Kids' Shopping</span>
+                <span class="sub-title">Discounts</span>
+            </div>
+            <div class="col">
+                <span class="col-title">Company</span>
+                <span class="sub-title">Our Story</span>
+                <span class="sub-title">Careers</span>
+                <span class="sub-title">Terms & Conditions</span>
+                <span class="sub-title">Privacy & Cookie policy</span>
+            </div>
+            <div class="col">
+                <address>
+                    <span class="col-title">Contact</span>
+                    <span class="sub-title">1-202-555-0105</span>
+                    <span class="sub-title">1-202-555-0106</span>
+                    <span class="sub-title">help@shopper.com</span>
+                </address>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

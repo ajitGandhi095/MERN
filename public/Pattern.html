@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern | Regular Expression</title>
+</head>
+<body>
+    
+    <form>
+        <!-- Test: <input type="text" name="Pattern-Match" autofocus pattern="colou?r"> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" autofocus pattern="colou*r"> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" autofocus pattern="colou+r"> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" autofocus pattern=".at"> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" autofocus pattern="red|green|blue"> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" autofocus pattern="gmail\.com"> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" autofocus pattern="[a,b,c,d,e,f,i,e,t,g,h,@,8,3,4,6,0,!]"> -->
+        <!-- Test: <input type="text" name="Pattern-Match" autofocus pattern="[a-z,A-Z,0-9,!,@,#,$,%,*,|,?]"> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\d"><button>Submit</button> -->
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\d?\d?"><button>Submit</button> -->
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\d\d?"><button>Submit</button> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\D"><button>Submit</button> -->
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\d\D"><button>Submit</button> -->
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\D\d"><button>Submit</button> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\w"><button>Submit</button> -->
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\w\D"><button>Submit</button> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\W"><button>Submit</button> -->
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\d\W\D"><button>Submit</button> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\s"><button>Submit</button> -->
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\d\s\D"><button>Submit</button> -->
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\d\s\d"><button>Submit</button> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="[^a-z,A-Z]"><button>Submit</button> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="color\i"><button>Submit</button> -->
+
+                <!-- Quantifiers -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\d{10}"><button>Submit</button> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\d{4,6}"><button>Submit</button> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\d{4,}"><button>Submit</button> -->
+
+        <!-- Test: <input type="text" name="Pattern-Match" pattern="\w{4,8}"><button>Submit</button> -->
+
+        <!-- Test: <input type="text" name="Pattern-match" pattern="\+91\d{10}"> -->
+
+        Test: <input type="text" name="Pattern-match" pattern="\+\(1\)\(\d{3}\)\s\d{3}-\d{4}">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            width: 1100px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .bi-justify {
+            font-size: 25px;
+        }
+        span img {
+            margin-left: 20px;
+        }
+        .logo {
+            width: 150px;
+        }
+        .search {
+            width: 700px;
+        }
+        .search-bar {
+            width: 500px;
+            border: 1px solid gray;
+            padding: 10px;
+            font-family: Arial;
+            display: inline-flex;
+            justify-content: space-between;
+            border-radius: 20px;
+            margin-right: 20px;
+        }
+        .bi-mic-fill {
+            border: 1px solid lightgray;
+            padding: 8px;
+            border-radius: 50px;
+            background-color: lightgray;
+            font-size: 20px;
+            margin-left: 5px;
+        }
+        .bi-three-dots-vertical {
+            font-size: 20px;
+            width: 30px;
+            margin-left: -20px;
+        }
+        .bi-person-fill {
+            width: 80px;
+            margin-left: 90px;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 1fr 11fr;
+            
+        }
+       nav {
+        padding: 10px;
+        height: 40%;
+        margin-bottom: 10px;
+       }
+       article {
+        display: grid;
+        grid-template-columns: 1fr 10fr;
+       }
+       .article-img {
+        margin-left: 100px;
+        margin-top: 5px;
+       }
+       .article-desc {
+        margin-left: 20px;
+        font-family: Arial;
+       }
+       .font-head {
+        font-size: 35px;
+        font-weight: bold;
+        margin-top: -5px
+       }
+       .article-desc-2 {
+        margin-top: 10px;
+        color: gray;
+       }
+       .article-desc-3 {
+        margin-top: 13px;
+        color: gray;
+       }
+       .article-desc-4 {
+        margin-top: 13px;
+        overflow: auto;
+       }
+       .article-desc-5 {
+        margin-top: 13px;
+        border: 1px solid black;
+        width: 90px;
+        padding: 8px;
+        text-align: center;
+        border-radius: 30px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+       }
+       .home {
+        margin-left: 105px;
+        font-size: 15px;
+        font-family: Arial;
+        font-weight: bold;
+        color: gray;
+        margin-top: 25px;
+        width: 700px;
+        
+       }
+       .border {
+        border: 1px solid rgb(221, 218, 218);
+        margin-top: 12px;
+        width: 100%;
+        margin-left: 50px;
+       }
+       .video {
+        margin-left: 105px;
+        margin-top: 25px;
+        font-family: Arial;
+       }
+       .video-btn {
+        font-size: 20px;
+        font-weight: bold;
+       }
+       .bi-play-fill {
+        margin-left: 15px;
+        font-size: 21px;
+       }
+       .play {
+        font-size: 15px;
+       }
+       .video-frame {
+        width: 300px;
+        margin-left: 105px;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+       }
+       iframe {
+        width: 210px;
+        height: 120px;
+        border-radius: 5px;
+        margin-left: 5px;
+       }
+       .iframe-1 {
+        display: flex;
+        flex-direction: column;
+       }
+       .frame-title {
+        width: 190px;
+        margin-top: 10px;
+        margin-left: 6px;
+        font-family: Arial;
+        font-size: 14px;
+       }
+       .frame-title1 {
+        font-family: Arial;
+        margin-top: 11px;
+        font-size: 12px;
+        color: gray;
+       }
+       .bi-three-dots-vertical {
+        margin-left: 88%;
+        margin-top: -60px;
+       }
+       .border2 {
+        border: 1px solid rgb(221, 218, 218);
+        width: 87%;
+        margin-left: 105px;
+       }
+       .frame2 {
+        margin-top:60px
+       }
+       .live-stream {
+        margin-left: 105px;
+        margin-top: 25px;
+        font-family: Arial;
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="bi bi-justify"></span>
+            <span><img src="./images/youtube-logo.PNG" width="100px"></span>
+        </div>
+        <div class="search">
+            <div class="search-bar"> 
+                <span style="color: gray;">Search</span>
+                <span class="bi bi-search"></span>
+            </div>
+           <span class="bi bi-mic-fill"></span>
+        </div>
+        <div class="sign-in">
+           <span class="bi bi-three-dots-vertical"></span>
+           <span class="bi bi-person-fill"> Sign in</span>
+        </div>
+        
+    </header>
+    <section>
+        <main>
+            <nav>
+                <div>
+                    <span class="bi bi-house"></span>
+                    <div>Home</div>
+                </div>
+                <div>
+                    <span class="bi bi-camera-video"></span>
+                    <div>Shorts</div>
+                </div>
+                <div>
+                    <span class="bi bi-play-btn"></span>
+                    <div>Subscription</div>
+                </div>
+                <div>
+                    <span class="bi bi-play-circle-fill"></span>
+                    <div>You</div>
+                </div>
+                <div>
+                    <span class="bi bi-clock-history"></span>
+                    <div>History</div>
+                </div>
+            </nav>
+            <div>
+                <img src="./images/youtube-title.PNG" width="100%">
+            </div>
+        </main>
+        <article>
+            <div class="article-img">
+                <img src="./images/article-image.PNG" width="150px">
+            </div>
+            <div class="article-desc">
+                <div class="font-head">
+                    Naresh i Technologies 
+                </div>
+                <div class="article-desc-2">
+                    @NareshIT  1.29M subscribers. 3.2K videos
+                </div>
+                <div class="article-desc-3">
+                    We are one of the software training organization With a library of 200+ courses, we have 
+                </div>
+                <div class="article-desc-4">
+                    <a href="https://www.instagram.com/nareshitech">instagram.com/nareshitech</a> <span>and 7 more links</span>
+                </div>
+                <div class="article-desc-5">
+                <div >
+                    Subscribe
+                </div>
+            </div>
+        </article>
+        <div class="home">
+            <span>Home</span>
+            <span>Videos</span>
+            <span>Shorts</span>
+            <span>Playlists</span>
+            <span>posts</span>
+            <span class="bi bi-search"></span>
+        </div>
+
+                    <!-- Frame-1  -->
+        <div>
+                    <!-- Border -->
+            <div class="border"></div>
+                    <!-- Video -->
+            <div>
+                <div class="video">
+                    <span class="video-btn">Videos</span>
+                    <span class="bi bi-play-fill"></span>
+                    <span class="play">Play all</span>
+                </div>
+            </div>
+                    <!-- Iframe -->
+            <div class="video-frame">
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/Ad-SZFfjmys" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/ZTye6gEiFvA" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/HHw5-W4SCVw" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/mAkEwgfLoY8" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/Fi8bjEAK2Gk" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+            </div>
+        </div>
+
+                <!-- Frame-2 -->
+        <div class="frame2">
+            <div class="border2"></div>
+            <div>
+                <div class="live-stream">
+                    <span class="video-btn">Past Live stream</span>
+                </div>
+            </div>
+                <!-- Iframe -->
+            <div class="video-frame">
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/tikN6kTKNyQ" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/ilOc5hl0bFM" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/nnMPuA_Fhj4" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/tikN6kTKNyQ" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/KFtoZGZopog" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+            </div>
+        </div>
+                <!-- Frame-3 -->
+        <div class="frame2">
+            <div class="border2"></div>
+            <div>
+                <div class="video">
+                    <span class="video-btn">Popular videos</span>
+                    <span class="bi bi-play-fill"></span>
+                    <span class="play">Play all</span>
+                </div>
+            </div>
+                <!-- Iframe -->
+            <div class="video-frame">
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/Ad-SZFfjmys" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+        
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/ZTye6gEiFvA" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+        
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/HHw5-W4SCVw" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+        
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/mAkEwgfLoY8" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+        
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/Fi8bjEAK2Gk" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+            </div>
+        </div>
+
+                <!-- Frame-4 -->
+        <div class="frame2">
+            <div class="border2"></div>
+            <div>
+                <div class="live-stream">
+                    <span class="video-btn">Big Data Analytics Tutorial</span>
+                </div>
+            </div>
+                <!-- Iframe -->
+            <div class="video-frame">
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/Ad-SZFfjmys" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+        
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/ZTye6gEiFvA" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+        
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/HHw5-W4SCVw" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+        
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/mAkEwgfLoY8" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+        
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/Fi8bjEAK2Gk" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+            </div>
+        </div>
+
+                <!-- Frame-5 -->
+        <div class="frame2">
+            <div class="border2"></div>
+            <div>
+                <div class="live-stream">
+                    <span class="video-btn">CORE JAVA Training Videos</span>
+                </div>
+            </div>
+                <!-- Iframe -->
+            <div class="video-frame">
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/Ad-SZFfjmys" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+        
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/ZTye6gEiFvA" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+        
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/HHw5-W4SCVw" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+        
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/mAkEwgfLoY8" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+        
+                <div class="iframe-1">
+                    <iframe src="https://www.youtube.com/embed/Fi8bjEAK2Gk" frameborder="0"></iframe>
+                    <span class="frame-title">
+                        What is ROWID in Oracle? A Simple Guide | NareshIT
+                    </span>
+                    <span class="frame-title1">131 views 11 hours ago</span>
+                    <div class="bi bi-three-dots-vertical"></div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+</body>
+</html>

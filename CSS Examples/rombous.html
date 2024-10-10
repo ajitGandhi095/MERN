@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform | CSS</title>
+    <style>
+        .div1 {
+            border: 1px solid black;
+            height: 150px;
+            width: 150px;
+            background-color: rgb(231, 129, 129);
+            transform: translate(500px,300px);
+        }
+        .div2 {
+            border: 1px solid black;
+            height: 150px;
+            width: 150px;
+            background-color: rgb(167, 237, 69);
+            transform: translate(457px,200px);
+        }
+        .div3 {
+            border: 1px solid black;
+            height: 50px;
+            width: 150px;
+            background-color: rgb(233, 208, 96);
+            transform: translate(478px,148px) skew(-40deg);
+        }
+        .div4 {
+            border: 1px solid black;
+            height: 50px;
+            width: 150px;
+            background-color: rgb(252, 162, 59);
+            transform: translate(478px,-54px) skew(-40deg);
+        }
+        .div5 {
+            border: 1px solid black;
+            height: 150px;
+            width: 42px;
+            /* background-color: rgb(88, 173, 226); */
+            transform: translate(457px,-80px) skewy(-49deg);
+        }
+        .div6 {
+            border: 1px solid black;
+            height: 150px;
+            width: 42px;
+            background-color: rgb(38, 183, 220);
+            transform: translate(608px,-231px) skewy(-50deg);
+        }
+        .main-div:hover {
+            transform: rotate(360deg);
+            transition: 10s;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main-div">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+        <div class="div5"></div>
+        <div class="div6"></div>
+        </div>
+
+</body>
+</html>

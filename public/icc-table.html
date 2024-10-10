@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICC-TABLE</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        table {
+            font-family: Arial;
+        }
+        caption {
+            color: rgb(33, 33, 100);
+            text-align: left;
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px black;
+        }
+        .card {
+            border-radius: 10px;
+            width: 400px;
+            height: 100px;
+        }
+        .bi-circle-fill {
+            font-size: 7px;
+            color: lightgray;
+        }
+        .t-head {
+            text-transform: uppercase;
+            font-size: 13px;
+            color: rgb(39, 39, 114);
+        }
+        .head-fname {
+            font-weight: normal;
+        }
+        tfoot {
+            font-size: 13px;
+            font-weight: bold;
+            color: rgb(39, 39, 114);
+        }
+        .bi-chevron-right {
+            font-size: 11px;
+            margin-left: 7px;
+        }
+        .row-1 {
+            display: flex;
+            justify-content: space-between;
+        }
+        .col-1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
+        }
+        .p-fname {
+            font-family: Segoe UI;
+            font-size: 15px;
+            font-weight: normal;
+            color: rgb(39, 39, 114);
+        }
+        .p-lname {
+            font-size: 16px;
+            font-weight: bold;
+            color: rgb(39, 39, 114);
+        }
+        .slno {
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(39, 39, 114);
+        }
+        .rank {
+            color: rgb(39, 39, 114);
+            font-weight: bold;
+            font-size: 14px;
+        }
+        td {
+        background-size: 120px 100px;
+        background-repeat: no-repeat;
+        background-position:right;
+       }
+       thead {
+        border: 3px solid green;
+       }
+    </style>
+</head>
+<body>
+    
+    <table width="1000px" border="1" frame="void" cellspacing="20px" cellpadding="10px" height="200px" align="center">
+        <caption>Men's all-rounder rankings</caption>
+        <tr height="400px">
+            <td class="card" valign="top">
+                <table rules="rows" width="100%" frame="void">
+                    <thead>
+                        <tr>
+                            <th align="center" colspan="4" class="t-head"><span class="head-fname">test</span> - allrounder Rankings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr1">
+                            <td width="50px" class="slno">01 <span class="bi bi-circle-fill"></span></td>
+                            <td width="40px"><img src="./images/flag.PNG" width="40px"></td>
+                            <td width="110px" background="./images/icc-logo.png">
+                                <div class="row-1">
+                                    <div class="col-1">
+                                        <div class="p-fname">Ravindra</div>
+                                        <div class="p-lname">Jadeja</div>
+                                    </div>
+                                    <div>
+                                        <img src="./images/player.PNG" width="60px" height="90px">
+                                    </div>
+                                </div>
+                            </td>
+                            <td width="40px" align="center" class="rank">444</td>
+                        </tr>
+                        <tr>
+                            <td height="45px">02 <span class="bi bi-circle-fill"></span></td>
+                            <td><img src="./images/flag.PNG" width="40px"></td>
+                            <td>
+                                <div>
+                                    <div class="p-fname">Ravichandran</div>
+                                    <div class="p-lname">ASHWIN</div>
+                                </div>
+                            </td>
+                            <td align="center" class="rank">322</td>
+                        </tr>
+                        <tr>
+                            <td height="45px">03 <span class="bi bi-circle-fill"></span></td>
+                            <td><img src="./images/icc-img2.PNG" width="40px"></td>
+                            <td>
+                                <div>
+                                    <span class="p-fname">Shakib</span>
+                                    <span class="p-lname">AL HASAN</span>
+                                </div>
+                            </td>
+                            <td class="rank" align="center">303</td>
+                        </tr>
+                        <tr>
+                            <td height="45px">04 <span class="bi bi-circle-fill"></span></td>
+                            <td><img src="./images/icc3.PNG" width="40px"></td>
+                            <td>
+                                <div>
+                                    <span class="p-fname">Joe</span>
+                                    <span class="p-lname">ROOT</span>
+                                </div>
+                            </td>
+                            <td class="rank" align="center">297</td>
+                        </tr>
+                        <tr>
+                            <td height="45px">05 <span class="bi bi-circle-fill"></span></td>
+                            <td><img src="./images/icc4.PNG" width="40px"></td>
+                            <td>
+                                <div>
+                                    <span class="p-fname">Jason</span>
+                                    <span class="p-lname">Holder</span>
+                                </div>
+                            </td>
+                            <td class="rank" align="center">270</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr valign="bottom" height="40px">
+                            <td align="center" colspan="4">Full Rankings <span class="bi bi-chevron-right"></span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </td>
+            <td class="card" width="400px" valign="top">
+                <table rules="rows" width="100%" frame="void">
+                    <thead>
+                        <tr>
+                            <th align="center" colspan="4" class="t-head"><span class="head-fname">ODI</span>  - allrounder Rankings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr1">
+                            <td width="50px" class="slno">01 <span class="bi bi-circle-fill"></span></td>
+                            <td width="40px"><img src="./images/iccnew1.PNG" width="40px"></td>
+                            <td width="110px" background="./images/icc-logo.png">
+                                <div class="row-1">
+                                    <div class="col-1">
+                                        <div class="p-fname">Mohammad</div>
+                                        <div class="p-lname">NABI</div>
+                                    </div>
+                                    <div>
+                                        <img src="./images/player-2.PNG" width="60px" height="90px">
+                                    </div>
+                                </div>
+                            </td>
+                            <td width="40px" align="center" class="rank">320</td>
+                        </tr>
+                        <tr>
+                            <td height="45px">02 <span class="bi bi-circle-fill"></span></td>
+                            <td><img src="./images/icc-img2.PNG" width="40px"></td>
+                            <td>
+                                <div>
+                                    <div class="p-fname">Shakib</div>
+                                    <div class="p-lname">AL HASAN</div>
+                                </div>
+                            </td>
+                            <td align="center" class="rank">292</td>
+                        </tr>
+                        <tr>
+                            <td height="45px">03 <span class="bi bi-circle-fill"></span></td>
+                            <td><img src="./images/iccnew2.PNG" width="40px"></td>
+                            <td>
+                                <div>
+                                    <span class="p-fname">Sikamdar</span>
+                                    <span class="p-lname">RAZA</span>
+                                </div>
+                            </td>
+                            <td class="rank" align="center">288</td>
+                        </tr>
+                        <tr>
+                            <td height="45px">04 <span class="bi bi-circle-fill"></span></td>
+                            <td><img src="./images/iccnew3.PNG" width="40px"></td>
+                            <td>
+                                <div>
+                                    <span class="p-fname">Assad</span>
+                                    <span class="p-lname">VALA</span>
+                                </div>
+                            </td>
+                            <td class="rank" align="center">248</td>
+                        </tr>
+                        <tr>
+                            <td height="45px">05 <span class="bi bi-circle-fill"></span></td>
+                            <td><img src="./images/iccnew4.PNG" width="40px"></td>
+                            <td>
+                                <div>
+                                    <span class="p-fname">Rashid</span>
+                                    <span class="p-lname">KHAN</span>
+                                </div>
+                            </td>
+                            <td class="rank" align="center">239</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr valign="bottom" height="40px">
+                            <td align="center" colspan="4">Full Rankings <span class="bi bi-chevron-right"></span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </td>
+            <td class="card" width="400px" valign="top">
+                <table rules="rows" width="100%" frame="void">
+                    <thead>
+                        <tr>
+                            <th align="center" colspan="4" class="t-head"><span class="head-fname">T20</span> - allrounder Rankings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr1">
+                            <td width="50px" class="slno">01 <span class="bi bi-circle-fill"></span></td>
+                            <td width="40px"><img src="./images/icc5.PNG" width="40px"></td>
+                            <td width="110px" background="./images/icc-logo.png">
+                                <div class="row-1">
+                                    <div class="col-1">
+                                        <div class="p-fname">Marcus</div>
+                                        <div class="p-lname">STOINIS</div>
+                                    </div>
+                                    <div>
+                                        <img src="./images/player3.PNG" width="60px" height="90px">
+                                    </div>
+                                </div>
+                            </td>
+                            <td width="40px" align="center" class="rank">211</td>
+                        </tr>
+                        <tr>
+                            <td height="45px">02 <span class="bi bi-circle-fill"></span></td>
+                            <td><img src="./images/iccnew2.PNG" width="40px"></td>
+                            <td>
+                                <div>
+                                    <div class="p-fname">Sikandar</div>
+                                    <div class="p-lname">RAZA</div>
+                                </div>
+                            </td>
+                            <td align="center" class="rank">208</td>
+                        </tr>
+                        <tr>
+                            <td height="45px">03 <span class="bi bi-circle-fill"></span></td>
+                            <td><img src="./images/icc-img2.PNG" width="40px"></td>
+                            <td>
+                                <div>
+                                    <span class="p-fname">Shakib</span>
+                                    <span class="p-lname">AL HASAN</span>
+                                </div>
+                            </td>
+                            <td class="rank" align="center">206</td>
+                        </tr>
+                        <tr>
+                            <td height="45px">04</span> <span class="bi bi-circle-fill"></span></td>
+                            <td><img src="./images/iccal1.PNG" width="40px"></td>
+                            <td>
+                                <div>
+                                    <span class="p-fname">Wanindu</span>
+                                    <span class="p-lname">HASARANGA</span>
+                                </div>
+                            </td>
+                            <td class="rank" align="center">206</td>
+                        </tr>
+                        <tr>
+                            <td height="45px">05 <span class="bi bi-circle-fill"></span></td>
+                            <td><img src="./images/iccnew4.PNG" width="40px"></td>
+                            <td>
+                                <div>
+                                    <span class="p-fname">Mahammad</span>
+                                    <span class="p-lname">NABI</span>
+                                </div>
+                            </td>
+                            <td class="rank" align="center">205</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr valign="bottom" height="40px">
+                            <td align="center" colspan="4">Full Rankings <span class="bi bi-chevron-right"></span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

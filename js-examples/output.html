@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input/Output | Javascript</title>
+    <script type="text/javascript">
+        "use strict";
+        function DeleteClick()
+         {                  // alert()
+            // alert((1+2) + " Record Deleted Successfully\n Are Your Sure?");
+            
+                            // confirm()
+            // var flag = confirm((1+2) + " Record Delete\n Are You Sure?");
+            // if(flag==true){
+            //     alert("Record Deleted Successfully.....");
+            // }
+            // else{
+            //     alert("Cancelled.......")
+            // }
+
+                            // document.write()
+            // var flag= confirm("Record Delete\n Are you sure?");
+            // if(flag==true) {
+            //     document.write("<h1 style='color: green'>Deleted Successfully....</h1> <br><a href='output.html'>Back</a>");
+            // }
+            // else {
+            //     document.write("Cancelled.... <br><br><a href='output.html'>Back</a>");
+            // }
+
+                            // textContent/Innertext <---- Don't support complex text
+            // var flag= confirm("Record delete\n Are you sure?")
+            // if(flag==true) {
+            //     document.write("<h1>Deleted Successfully....</h1> <br> <a href='outer.html'>Back</a>");
+            // }
+            // else {
+            //     document.getElementById("delete").textContent= "Try again....";
+            //     document.querySelector("p").innerText= "Record Deleted Successfully.....";
+            // }
+
+                            // innerHTML
+            // var flag= confirm("Record Delete\n Are you sure?");
+            // if(flag==true) {
+            //     document.write("<h2>Record Deleted Successfully</h2> <br> <a href='output.html'>Back</a>");
+            // }
+            // else {
+            //     document.getElementById("delete").textContent= "Try again...."
+            //     document.querySelector("p").innerHTML= "<h1>Delete Cancelled</h1>";
+
+            // }
+
+                            // outerHTML
+            // var flag= confirm("Record Delete\n Are you sure?");
+            // if(flag==true) {
+            //     document.write("<h2>Record Deleted Successfully</h2> <br> <a href='output.html'>Back</a>");
+            // }
+            // else {
+            //     document.getElementById("delete").textContent= "Try again....";
+            //     document.querySelector("p").outerHTML= "<h1>Delete Cancelled</h1>";
+            // }
+
+                            // console Method
+            console.warn("Delete Button Click");
+            var flag= confirm("Record Delete\n Are you sure?");
+            if(flag==true) {
+                document.write("<h2>Record Deleted Successfully</h2> <br> <a href='output.html'>Back</a>");
+                console.error("ok click Deleted Successfully.....");
+            }
+            else {
+                document.getElementById("delete").textContent= "Try again....";
+                document.querySelector("p").outerHTML= "<h1>Delete Cancelled</h1>";
+                console.log("Delete Cancel");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <button onclick="DeleteClick()">Delete</button>
+    <p></p>
+    <div id="delete" style="position: absolute; top: 35px; right: 100px"></div>
+</body>
+</html>

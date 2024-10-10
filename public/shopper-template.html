@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            font-family: 'Segoe UI';
+            font-size: 22px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: baseline;
+        }
+        .brand-title {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        nav span {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .shortcuts span {
+            margin-right: 5px;
+        }
+        article {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-family: Segoe UI;
+        }
+        .bi-lightning-fill{
+            color: goldenrod;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            font-family: 'Segoe UI';
+            padding: 20px;
+            height: 400px;
+        }
+        .row-1 {
+            text-align: center;
+        }
+        .footer-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .row-2 {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .email {
+            display: inline-block;
+            padding: 20px;
+            background-color: #444;
+            color: #aaa;
+            width: 300px;
+            text-align: left;
+        }
+        .subscribe {
+            display: inline-block;
+            padding: 20px;
+            background-color: #666;
+            width: 110px;
+            margin-left: 14px;
+            font-weight: bold;
+            font-family: 'Segoe UI';
+
+        }
+        .row-3 {
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            margin-top: 60px;
+            margin-left: 130px;
+        }
+        .col span{
+            display: block;
+        }
+        .col-title {
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-left: 5px;
+            width: 100px;
+            font-size: 18px;
+        }
+        .sub-title {
+            padding: 4px;
+            color: #bbb;
+            font-family: sans-serif;
+            width: 170px;
+        }
+        aside span {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 2px;
+            margin-left: 5px;
+        }
+        .brand-footer {
+            margin-right: 40px;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            height: 450px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .woman-fashion {
+            background-image: url("./images/Woman-Fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            opacity: 0.7;
+        }
+        .men-fashion {
+            background-image: url("./images/Men-Fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            opacity: 0.7;
+        }
+        .kid-fashion {
+            background-image: url("./images/Kid-Fashion.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            opacity: 0.7;
+        }
+        .main-title {
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: 'segoe UI';
+            text-shadow: 2px 2px 2px black;
+        }
+        .btn-shop {
+            background-color: white;
+            padding: 10px;
+            font-family: 'segoe UI';
+            width: 130px;
+            text-align: center;
+        }
+        .woman-fashion:hover {
+            opacity: 1;
+            transition: 0.6s;
+        }
+        .men-fashion:hover {
+            opacity: 1;
+            transition: 0.6s;
+        }
+        .kid-fashion:hover {
+            opacity: 1;
+            transition: 0.6s;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <span class="brand-title">Shopper.</span>
+        </div>
+        <div>
+           <nav>
+                <span>Home</span>
+                <span>Catelog</span>
+                <span>Shop</span>
+                <span>Pages</span>
+                <span>Blog</span>
+                <span>Docs</span>
+           </nav>
+        </div>
+        <div class="shortcuts">
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart"></span>
+        </div>
+    </header>
+
+    <section>
+        <article>
+            <span class="bi bi-lightning-fill"></span>
+            <span>HAPPY HOLIDAY DEALS ON EVERYTHING</span>
+            <span class="bi bi-lightning-fill"></span>
+        </article>
+        <main>
+            <div class="woman-fashion">
+                <div class="main-title">Women</div>
+                <div class="btn-shop">Shop Women <span class="bi bi-arrow-right"></span></div>
+            </div>
+            <div class="men-fashion">
+                <div class="main-title">Men</div>
+                <div class="btn-shop">Shop Men <span class="bi bi-arrow-right"></span></div>
+            </div>
+            <div class="kid-fashion">
+                <div class="main-title">Kids</div>
+                <div class="btn-shop">Shop Kids <span class="bi bi-arrow-right"></span></div>
+            </div>
+        </main>
+
+    </section>
+
+    <footer>
+        <div class="row-1">
+            <span class="footer-title">Want style Ideas and Treats?</span>
+        </div>
+        <div class="row-2">
+            <span class="email">Enter Email*</span>
+            <span class="subscribe">Subscribe</span>
+        </div>
+        <div class="row-3">
+            <div class="brand-footer">
+                <span class="brand-title">Shopper.</span>
+                <aside>
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-youtube"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-instagram"></span>
+                    <span class="bi bi-linkedin"></span>
+                </aside>
+            </div>
+            <div class="col">
+                <span class="col-title">Support</span>
+                <span class="sub-title">Contact Us</span>
+                <span class="sub-title">FAQs</span>
+                <span class="sub-title">Size Guide</span>
+                <span class="sub-title">Shipping & Returns</span>
+            </div>
+            <div class="col">
+                <span class="col-title">Shop</span>
+                <span class="sub-title">Men's Shopping</span>
+                <span class="sub-title">Women's Shopping</span>
+                <span class="sub-title">Kids' Shopping</span>
+                <span class="sub-title">Discounts</span>
+            </div>
+            <div class="col">
+                <span class="col-title">Company</span>
+                <span class="sub-title">Our Story</span>
+                <span class="sub-title">Careers</span>
+                <span class="sub-title">Terms & Conditions</span>
+                <span class="sub-title">Privacy & Cookie policy</span>
+            </div>
+            <div class="col">
+                <address>
+                    <span class="col-title">Contact</span>
+                    <span class="sub-title">1-202-555-0105</span>
+                    <span class="sub-title">1-202-555-0106</span>
+                    <span class="sub-title">help@shopper.com</span>
+                </address>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

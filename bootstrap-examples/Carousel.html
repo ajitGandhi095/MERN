@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel | Component</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="container-fluid">
+    
+    <div class="carousel slide" data-bs-theme="dark" data-bs-ride="carousel" id="banners">
+        <div class="carousel-inner mt-3">
+            <div class="carousel-item active">
+                <img height="300px" src="../public/images/slider-1.PNG" class="w-100 d-block">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img height="300px" src="../public/images/slider-2.PNG" class="w-100 d-block">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img height="300px" src="../public/images/slider-3.PNG" class="w-100 d-block">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img height="300px" src="../public/images/slider-4.PNG" class="w-100 d-block">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img height="300px" src="../public/images/slider-5.PNG" class="w-100 d-block">
+            </div>
+            <div class="carousel-item bg-dark" data-bs-interval="2000">
+                <div style="height: 300px" class="d-flex justify-content-center align-items-center">
+                    <div class="input-group p-3 rounded w-50">
+                        <input type="email" placeholder="Enter Your Email" class="form-control bg-white text-bg-dark">
+                        <button class="btn btn-danger">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banners">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banners">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button class="active" data-bs-slide-to="0" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="2" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="3" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="4" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="5" data-bs-target="#banners"></button>
+        </div>
+    </div>
+
+</body>
+</html>

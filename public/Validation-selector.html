@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Selector</title>
+    <style>
+        input:optional+span {
+            display: none;
+        }
+        input:required+span {
+            display: inline;
+            color: red;
+        }
+        input:required {
+            border: 1px solid red;
+        }
+        input:optional~div {
+            display: none;
+        }
+        input:required~div {
+            display: block;
+            color: red;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+        input:valid~div {
+            display: none;
+        }
+        input:valid+span {
+            display: none;
+        }
+        .password:valid{
+            border: 1px solid green;
+        }
+        .mobile:valid~div {
+            display: none;
+        }
+        .mobile:valid+span {
+            display: none;
+        }
+        .mobile:valid {
+            border: 1px solid green;
+        }
+        .mobile:invalid~div{
+            display: block;
+        }
+        .mobile:invalid+span {
+            display: inline;
+        }
+        .mobile:valid+span {
+            display: none;
+        }
+        .age:in-range~div {
+            display: none;
+        }
+        .age:out-of-range~div {
+            display: block;
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <dl>
+            <dt>User Name</dt>
+            <dd>
+                <input type="text"><span>*</span>
+                <div>UserName Required</div>
+            </dd>
+            <dt>Password</dt>
+            <dd>
+                <input type="password" required class="password"><span>*</span>
+                <div>Password Required</div>
+            </dd>
+            <dt>Age</dt>
+            <dd>
+                <input type="number" class="age" min="21" max="32"><span>*</span>
+                <div>Age must be 21 to 32</div>
+            </dd>
+            <dt>Mobile</dt>
+            <dd>
+                <input type="text" class="mobile" pattern="\+91\d{10}" required><span>*</span>
+                <div>Invalid Number enter +91 and 10 digits Number</div>
+            </dd>
+        </dl>
+        <button>Register</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt|Demo</title>
+    <script type="text/javascript">
+        "use strict";
+        function clickAdd()
+        {
+            var result= prompt("Enter Your File Name");
+            if(result==null) {
+                alert('Action Cancelled');
+            }
+            else if(result=="") {
+                alert('Please Enter File Name');
+            }
+            else {
+                document.getElementById("lblFolder").innerHTML += "Folder Created: " + result + "<br>";
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <h3>Goole Drive</h3>
+    <div>
+        <button onclick="clickAdd()">+Add File</button>
+    </div>
+    <br><br>
+    <div id="lblFolder">
+        
+    </div>
+</body>
+</html>

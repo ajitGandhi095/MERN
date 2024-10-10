@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Layout</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        button {
+            font-size: 22px;
+            margin-right: 10px;
+        }
+        .brand-title {
+            font-size: 22px;
+            font-weight: bold;
+            font-family: Arial;
+        }
+        nav span {
+            font-size: 18px;
+            margin: 0px 20px 0px 20px;
+        }
+        header {
+            background-color:black;
+            color: white;
+            padding: 10px;
+        }
+        .brand {
+            display: flex;
+        }
+        .icon {
+            font-size: 18px;
+            margin: 0px 20px 0px ;
+        }
+        .icon:hover {
+            cursor: pointer;
+        }
+        @media screen and (orientation:landscape)
+        {
+            header {
+                display: flex;
+                justify-content: space-between;
+            }
+            button {
+                display: none;
+            }
+        }
+
+        @media screen and (orientation:portrait)
+        {
+            header {
+                display: flex;
+                justify-content: space-between;
+            }
+            nav span {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="brand">
+            <button class="bi bi-justify"></button>
+            <div class="brand-title">Shopper.</div>
+        </div>
+        <nav>
+            <span>Home</span>
+            <span>About</span>
+            <span>Blog</span>
+            <span>Pages</span>
+            <span>Docs</span>
+        </nav>
+        <div class="icon">
+            <span class="bi bi-cart"></span>
+            <span class="bi bi-person" style="margin: 20px;"></span>
+            <span class="bi bi-heart"></span>
+        </div>
+    </header>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form | Demo</title>
+    <style>
+        /* input:read-only {
+            cursor: not-allowed;
+        } */
+        .password+div {
+            display: none;
+        }
+        .password:focus+div {
+            display: block;
+            font-size: 14px;
+            color: red;
+            margin-top: 5px;
+        }
+        .terms+label {
+            color: red;
+        }
+        .terms:checked+label {
+            color: green;
+        }
+        .terms~button {
+            display: none;
+        }
+        .terms:checked~button {
+            display: block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" readonly></dd>
+            <dt>Password</dt>
+            <dd>
+                <input type="password" class="password" pattern="\w{4-15}">
+                <div>Password can 4 to 15 letter Alpha Numeric</div>
+            </dd>
+            <dt>Terms and Services</dt>
+            <dd>
+                <textarea rows="6" cols="40" readonly>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum odio laboriosam quam corporis dolorum. Aliquid rem, distinctio recusandae alias cumque, minus possimus perferendis, facere voluptatum quis autem voluptatem consectetur libero!</textarea>
+                <div>
+                    <input type="checkbox" class="terms" name="checkbox">
+                    <label for="checkbox">I Accept the terms and conditions</label>
+                    <br><br>
+                    <button type="submit">Login</button>
+                </div>
+            </dd>
+        </dl>
+    </form>
+
+</body>
+</html>

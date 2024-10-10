@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Hierarchy | Javascript</title>
+    <script type="text/javascript">
+        "use strict";
+        function bodyLoad()
+        {
+                            //One Element Access by DOM Hierarchy 
+            // window.document.images[0].src="../public/images/Men-Fashion.jpg";
+            // window.document.forms[0].elements[2].value="Register";
+            // window.document.forms[1].elements[1].value="Login";
+
+                            //One Element Access by  Reference Name
+            // pic.src="../public/images/Men-Fashion.jpg";
+            // frmRegister.btnRegister.value="Register";
+            // frmLogin.btnLogin.value="Login";
+
+                            //One Element Access by ID
+            // document.getElementById("pic").src="../public/images/Woman-Fashion.jpg";
+            // document.getElementById("btnRegister").value="Register";
+            // document.getElementById("btnLogin").value="Login";
+
+                            //One Element Access By CSS Selectors
+            document.querySelector("img").src="../public/images/Kid-Fashion.jpg";
+            document.querySelector("#btnRegister").value="Register";
+            document.querySelector(".btnLogin").value="Login";
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    
+    <div>
+        <img height="100px" width="100px" id="pic" name="pic">
+    </div>
+    <div>
+        <form name="frmRegister">
+            <h3>Register</h3>
+            Username: <input type="text"> Age: <input type="number"> <input type="button" name="btnRegister" id="btnRegister">
+        </form>
+    </div>
+    <div>
+        <h3>Login</h3>
+        <form name="frmLogin">
+           Mobile: <input type="text"> OTP: <input type="text"> <input type="button" name="btnLogin" id="btnLogin" class="btnLogin">
+        </form>
+    </div>
+
+</body>
+</html>
