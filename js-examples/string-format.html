@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Format | Javascript</title>
+    <script type="text/javascript">
+        "use strict";
+        function applyClick() {
+            var size= document.getElementById("rangeFontSize").value;
+            var color= document.getElementById("txtColor").value;
+            var style= document.getElementById("lstStyles").value;
+            document.getElementById("msg").innerHTML= "Sample Text".fontsize(size).fontcolor(color);
+            if(style=="bold"){
+                document.getElementById("msg").innerHTML= "Sample Text".fontsize(size).fontcolor(color).bold();
+            }
+            else if(style=="italics"){
+                document.getElementById("msg").innerHTML= "Sample Text".fontsize(size).fontcolor(color).italics();
+            }
+            else{
+                document.getElementById("msg").innerHTML= "Sample Text".fontsize(size).fontcolor(color).Arial();
+            }
+
+        }
+    </script>
+</head>
+<body>
+    
+    <dl>
+        <dt>Select Font Size</dt>
+        <dd> <input type="range" min="1" max="7" value="3" id="rangeFontSize"> </dd>
+        <dt>Set Color</dt>
+        <dd> <input type="color" id="txtColor"> </dd>
+        <dt>Select Style</dt>
+        <dd>
+            <select id="lstStyles">
+                <option>Choose Style</option>
+                <option>bold</option>
+                <option>italics</option>
+                <option>Arial</option>
+            </select>
+        </dd>
+    </dl>
+    <button onclick="applyClick()">Apply</button>
+    <p id="msg" align="center">Sample Text</p>
+
+</body>
+</html>

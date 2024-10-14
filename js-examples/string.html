@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String | Javascript</title>
+    <script type="text/javascript">
+        "use strict";
+        // var path= "\"D:\\images\\photos.jpg\";"
+        // document.write(path);
+
+        function changeCase() {
+            var code= document.getElementById("textCode").value;
+            document.getElementById("textCode").value= code.toUpperCase();
+        }
+    </script>
+</head>
+<body>
+                <!-- How to write a tag like a string -->
+        <!-- &lt;div&gt;</div> -->
+    
+                <!-- Click outside textbox text convert to uppercase latter -->
+        <dt>Bank IFSC Code:</dt>
+        <!-- <dd><input type="text" id="textCode" onblur="changeCase()"></dd> -->
+                                    <!-- OR -->
+        <dd><input type="text" id="textCode" onkeyup="changeCase()"></dd>
+
+</body>
+</html>
