@@ -1,0 +1,21 @@
+<script>
+                // Normal Presentation
+    // var userName= prompt("Enter Name:");
+    // var age= parseInt(prompt("Enter Age"));
+    // var msg1= "Hello !&nbsp;" + userName + "&nbsp;Your Age Is&nbsp;" + age + "&nbsp;Next Year You Will be&nbsp;" + (age+1) + "<br>";
+    // var msg2= `Hello ! ${userName} Your age is ${age} Next year you will be ${age+1}`;
+    // document.write(msg1);
+    // document.write(msg2)
+
+                // Complex Presentation
+    var title= prompt("Enter Title");
+    var type= prompt ("Enter Element Type", "text|password|color|file");
+    var btnText= prompt("Enter Button Text");
+    var component= `
+        <h2>${title}</h2>
+        <div>
+            <input type=${type}> <button>${btnText}</button>
+        <div>
+    `;
+    document.write(component);
+</script>

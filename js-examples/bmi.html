@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI ProgressBar | Bootstrap</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function bodyLoad() {
+            var you= document.getElementById("you");
+            var bmi= prompt("Enter BMI");
+            you.style.marginLeft= parseInt(bmi) * 10 + "px";
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyLoad()">
+    
+    <div class="progress my-4">
+        <div class="progress-bar bg-info" style="width: 25%">Under Weight</div>
+        <div class="progress-bar bg-dark ms-1" style="width: 25%">Normal</div>
+        <div class="progress-bar bg-primary ms-1" style="width: 25%">Over Weight</div>
+        <div class="progress-bar bg-success ms-1" style="width: 25%">Obese</div>
+    </div>
+    <div id="you" class="bi bi-triangle-fill" style="margin-top: -20px;">You</div>
+
+</body>
+</html>

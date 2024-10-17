@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator | JavaScript</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .main-row {
+            margin-left: 50px;
+        }
+        .column-2 {
+            margin-left: 20px;
+        }
+        .column-3 {
+            margin-left: -70px;
+        }
+        .emi-bg {
+            background-image: linear-gradient(rgb(231, 198, 87),rgb(81, 219, 234),rgb(44, 125, 232));
+        }
+        .second-row {
+            margin-left: 50px;
+        }
+       .year-range {
+        width: 50%;
+        margin-left: 30px;
+       }
+       .amountrange {
+        width: 80%;
+       }
+       .interest-range {
+        width: 50%;
+        margin-left: -20px;
+       }
+       .amountfloat-end {
+        margin-right: 70px;
+        margin-top: -25px;
+       }
+       .year-min {
+        margin-left: 30px;
+       }
+       .yearfloat-end {
+        margin-right: 140px;
+        margin-top: -25px;
+       }
+       .interest-min {
+        margin-left: -20px;
+       }
+       .interestfloat-end {
+        margin-right: 190px;
+        margin-top: -25px;
+       }
+       .calculate-btn {
+        margin-right: 20px;
+       }
+    </style>
+
+    <script>
+        function AmountChange() {
+            document.getElementById("txtAmount").value = document.getElementById("amountRange").value;
+        }
+        function YearChange(){
+            document.getElementById("txtYears").value = document.getElementById("yearRange").value;
+        }
+        function InterestChange(){
+            document.getElementById("txtRate").value = document.getElementById("interestRange").value;
+        }
+        function CalculateClick() {
+            var P= parseInt(document.getElementById("txtAmount").value);
+            var R= parseFloat(document.getElementById("txtRate").value)/12/100;
+            var n= parseInt(document.getElementById("txtYears").value) * 12;
+            var EMI= P * R * (Math.pow(1+R,n)) / (Math.pow(1+R,n)-1);
+            document.getElementById("lblResult").innerHTML= "Your Monthly InstallmentAmount Is <b>" + Math.round(EMI).toLocaleString('en-in',{ style: 'currency', currency:'INR'}) + " </b> For Next " + n + " months";
+        }
+    </script>
+</head>
+<body class="container-fluid bg-secondary">
+    
+    <div class="p-4 m-4 emi-bg">
+        <h2 class="text-center">Personal Loan EMI Calculator</h2>
+        <div class="row my-3 main-row">
+            <div class="col">
+                Amount you need &#8377; <input type="text" id="txtAmount" size="16">
+            </div>
+            <div class="col column-2">
+                for <input type="text" id="txtYears" size="2"> years
+            </div>
+            <div class="col column-3" >
+                Interest rate <input type="text" id="txtRate" size="4"> %
+            </div>
+        </div>
+
+        <div class="row my-3 second-row">
+            <div class="col">
+                <input type="range" id="amountRange" class="form-range amountrange" value="50000" min="50000" max="4000000" onchange="AmountChange()">
+                <div>&#8377;50,000</div>
+                <div class="float-end amountfloat-end">&#8377;40,00,000</div>
+            </div>
+            <div class="col secondrow-column-2" width="10%">
+                <input type="range" id="yearRange" class="form-range year-range" value="1" min="1" max="5" onchange="YearChange()">
+                <div class="year-min">1 Year</div>
+                <div class="float-end yearfloat-end">5 Year</div>
+            </div>
+            <div class="col secondrow-column-3">
+                <input type="range" id="interestRange" class="form-range interest-range" value="10.75" min="10.75" max="21" step="0.01" onchange="InterestChange()">
+                <div class="interest-min">10.75%</div>
+                <div class="float-end interestfloat-end">21%</div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col text-end">
+                <button class="btn btn-primary calculate-btn" onclick="CalculateClick()">CALCULATE</button>
+            </div>
+        </div>
+
+        <div class="row my-4 text-center">
+            <div id="lblResult" class="fs-3"></div>
+        </div>
+    </div>
+
+</body>
+</html>

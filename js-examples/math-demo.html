@@ -21,13 +21,16 @@
         {
             getCode();
         }
-        document.getElementById("txtCode").innerHMTL= getCode().value;
-        if(getCode()==txtCode.value) {
-            document.write("Valid Code")
-        }
-        else {
-            document.write("Invalid Code");
-        }
+        // function VerifyCaptcha() {
+        //     var captcha= document.getElementById("lblCode").value;
+        //     var captchaError= document.getElementById("captchaError");
+        //     if(txtCode==captcha) {
+        //         captchaError.innerHTML= "";
+        //     }
+        //     else {
+        //         captchaError.innerHTML= "Please Enter Valid Code".fontcolor('red');
+        //     }
+        // }
     </script>
 </head>
 <body class="container-fluid" onload="bodyLoad()">
@@ -40,7 +43,8 @@
         <dd><input type="password"></dd>
         <dt>Verify Code <button style="border: none; background-color: white;" class="bi bi-arrow-clockwise" onclick="reLoad()"></button></dt>
         <dd id="lblCode"></dd>
-        <dd><input type="text" id="txtCode"></dd>
+        <dd><input type="text" id="txtCode" onblur="VerifyCaptcha()"></dd>
+        <dd id="captchaError"></dd>
         <button class="bg-info border-info">Login</button>
     </dl>
 
