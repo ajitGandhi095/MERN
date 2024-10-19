@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Example | Javascript</title>
+    <script>
+        function VerifyName() {
+            var userName= document.getElementById("txtName").value;
+            if(userName.length >= 4) {
+                document.getElementById("btnSubmit").disabled= false;
+            }
+            else {
+                document.getElementById("btnSubmit").disabled= true;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <dl>
+        <dt>UserName</dt>
+        <dd><input type="text" onkeyup="VerifyName()" id="txtName" placeholder="UserName minimum 4 chars"></dd>
+    </dl>
+    <button id="btnSubmit" disabled>Submit</button>
+
+</body>
+</html>

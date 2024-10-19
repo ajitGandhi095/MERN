@@ -1,0 +1,73 @@
+<script>
+    var str= "Welcome To JavaScript";
+                    // 1) slice()
+    // document.write(str.slice(7,16) + "<br>"); ----> here 7 is start Index and 16 is end Index
+    
+                    // 2) substr()
+    // document.write(str.substr(7,8) + "<br>"); ----> it will defined from 7 index how many character you read
+
+                    // 3) substring()
+    // document.write(str.substring(7,0))  -----> it will defined 7 is start index and 0 is end index, it  
+    //                                            read bi-directional also. 
+
+                // Verify Email
+    // var email= prompt("Enter Email");
+    // var atPos= email.indexOf("@");
+    // var id= email.slice(0,atPos);
+    // var domain= email.slice(atPos + 1);
+    // document.write(`User Id: ${id} <br> Domain Id: ${domain}`);
+
+                        // OR
+    // var email= prompt("Enter Your email");
+    // var id= email.substring(email.indexOf("@"),0);
+    // var domain= email.substring(email.indexOf("@")+1);
+    // document.write(`Id= ${id} <br> Domain= ${domain}`);
+
+                    // 4) trim()
+    
+    // var otp= prompt("Enter OTP");
+    // if(otp.trim()=="4567") {
+    //     document.write("Payment Successful....");
+    // }
+    // else {
+    //     document.write("Invalid otp");
+    // }
+
+
+                    // 5) split()
+    // var contacts= "david-9856746574, sam-7205638746";
+    // var result= contacts.split(',');
+    // // document.write(result[1]);
+    // var [david, sam]= result;
+    // document.write(david.split('-')[1]);
+
+    // function SentenceCase(msg) {
+    //                     // Write logic for printing sentance case
+    //     // document.write(msg.charAt(0).toUpperCase() + msg.slice(1).toLowerCase());
+
+    //                     // OR
+    //     var firstChars= msg.charAt(0);
+    //     var restChars= msg.slice(1);
+    //     var result= firstChars.toUpperCase() + restChars.toLowerCase();
+    //     document.write(result);
+    // }
+
+    // SentenceCase("WeLcoMe tO jaVAScrIpT");
+
+    // function titleCase(msg) {
+    //     //Write the logic here
+    //     var result= msg.split(' ');
+    //     console.log(result[0].charAt(0).toUpperCase() + result[0].slice(1).toLowerCase())
+    //     console.log(result[1].charAt(0).toUpperCase() + result[1].slice(1).toLowerCase())
+    //     console.log(result[2].charAt(0).toUpperCase() + result[2].slice(1).toLowerCase());
+    // }
+
+    // titleCase("welcome tO javaScriPt");
+
+
+                    // 6) replace()
+    var msg= "Welcome to JS. You can configure DOM manipulation with JS";
+    document.write(msg + "<br>");
+    document.write(msg.replace("JS", "JavaScript")+ "<br>");
+    document.write(msg.replaceAll("JS", "JavaScript"));
+</script>

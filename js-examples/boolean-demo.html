@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boolean Demo | JavaScript</title>
+    <script>
+        function RequiredValue() {
+            var checkbox= document.getElementById("optRequired");
+            var textbox= document.getElementById("txtName");
+            if(checkbox.checked) {
+                textbox.required= true;
+            }
+            else {
+                textbox.required= false;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <form>
+        <dl>
+            <dt>UserName</dt>
+            <dd><input type="text" id="txtName" name="UserName"></dd>
+            <dd><input onchange="RequiredValue()" type="checkbox" id="optRequired">Is Required</dd>
+        </dl>
+        <button id="btnSubmit">Submit</button>
+    </form>
+
+</body>
+</html>
