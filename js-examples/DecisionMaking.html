@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ternary | JavaScript</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function changeIcon() {
+            var icon= document.getElementById("txtIcon");
+            icon.className= (icon.className=="bi bi-sort-alpha-down")? "bi bi-sort-alpha-up" : "bi bi-sort-alpha-down";
+        }
+        function stockChange() {
+            var checkbox= document.getElementById("stock");
+            var stock= document.getElementById("lblStock");
+            stock.innerHTML= (checkbox.checked)? "Available".fontcolor("green") : "Out Of Stock".fontcolor("red");
+        }
+    </script>
+</head>
+<body>
+    
+    <div>
+        <input type="checkbox" id="stock" onchange="stockChange()"><label id="lblStock">Out Of Stock</label>
+    </div>
+    <button onclick="changeIcon()" class="bi bi-sort-alpha-down" id="txtIcon"></button>
+
+</body>
+</html>

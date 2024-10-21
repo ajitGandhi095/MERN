@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Collapse</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function clickBtn() {
+            var q1= document.getElementById("q1");
+            var icon= document.getElementById("icon");
+            q1.className= (q1.className==="d-none")? "d-block" : "d-none";
+            icon.className= (icon.className==="bi bi-plus")? "bi bi-dash" : "bi bi-plus";
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    
+    <button onclick="clickBtn()" class="btn btn-dark w-100 d-flex justify-content-between my-3">
+        <span>What is Netflix ?</span>
+        <span class="bi bi-plus" id="icon"></span>
+    </button>
+    <div  id="q1" class="d-none">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur hic doloribus totam maiores quidem repellendus animi optio perferendis! Cumque eius alias aliquam molestias facere, maxime natus, dolorum voluptas repellendus nulla itaque corrupti fugiat ducimus fugit dolores earum odio sit. Soluta cum culpa iste laudantium nisi quod ipsum sequi consectetur ratione.</p>
+    </div>
+
+</body>
+</html>

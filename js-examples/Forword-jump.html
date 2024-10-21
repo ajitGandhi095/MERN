@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forword Jump | JavaScript</title>
+    <script>
+        function ramChange() {
+            var ramSize= parseInt(document.getElementById("lstRam").value);
+            if(ramSize>=6) {
+                document.getElementById("card").disabled= false;
+            }
+        }
+        function graphicChange() {
+            var card= document.getElementById("card").value;
+            if(card!="") {
+                document.getElementById("btn").disabled= false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>Insall Game</legend>
+        <dl>
+            <dt>Select Ram Size</dt>
+            <dd>
+                <select id="lstRam" onchange="ramChange()">
+                    <option>Ram Size</option>
+                    <option value="4">4GB</option>
+                    <option value="6">6GB</option>
+                    <option value="8">8GB</option>
+                </select>
+            </dd>
+            <dt>Select Graphic Card</dt>
+            <dd>
+                <select id="card" onchange="graphicChange()" disabled>
+                    <option>Graphic Card</option>
+                    <option>Intel irix</option>
+                    <option>Amd Radon</option>
+                    <option>Dedicated 4GB</option>
+                </select>
+            </dd>
+        </dl>
+        <button disabled id="btn">Install</button>
+    </fieldset>
+
+</body>
+
+</html>
