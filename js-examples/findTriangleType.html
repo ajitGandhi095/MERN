@@ -1,0 +1,14 @@
+<script>
+    function findTriangleType(side1, side2, side3) {
+        if(side1==side2 && side1==side3) {
+            document.write(`Equilateral Trianlge`);
+        }
+        else if(side1==side2 | side1==side3 | side2==side3) {
+            document.write(`Isoscales Triangle`);
+        }
+        else {
+            document.write(`Scalene Triangle`);
+        }
+    }
+    findTriangleType(20,10,30);
+</script>

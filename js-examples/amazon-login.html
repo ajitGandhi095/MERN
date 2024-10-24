@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Login</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        var flag= "";
+        function ContinueClick() {
+            var userid= document.getElementById("txtId").value;
+            if(userid==="ajit12@gmail.com") {
+                flag= `Login Success with you Email ${userid}- Verification code Sent Successfully`;
+                document.getElementById("loginContainer").style.display= "none";
+                document.getElementById("passwordContainer").style.display= "block";
+            }
+            else if(userid==="+918117001129") {
+                flag= `Login Success with your Mobile ${userid}- OTP sent to your mobile number`;
+                document.getElementById("loginContainer").style.display= "none";
+                document.getElementById("passwordContainer").style.display= "block";
+            }
+            else{
+                document.getElementById("userError").innerHTML= `${userid} not registered`;
+            }
+        }
+
+        function PasswordClick() {
+            var password= document.getElementById("txtPwd").value;
+            if(password==="ajit123") {
+                document.write(`<h2> ${flag} </h2>`);
+            }
+            else {
+                document.getElementById("pwdError").innerHTML= "Invalid Password";
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh">
+
+    <div>
+        <div id="loginContainer">
+            <label class="form-label fw-bold">Your Email or Phone Number</label>
+            <div>
+                <input type="text" class="form-control" id="txtId">
+                <div id="userError" class="text-danger"></div>
+            </div>
+            <div class="mt-3">
+                <button class="btn btn-warning w-100" onclick="ContinueClick()">Continue</button>
+            </div>
+        </div>
+        <div id="passwordContainer" style="display: none;">
+            <label class="form-label fw-bold">Your Password</label>
+            <div>
+                <input type="password" class="form-control" id="txtPwd">
+                <div id="pwdError" class="text-danger"></div>
+            </div>
+            <div class="mt-3">
+                <button class="btn btn-warning w-100" onclick="PasswordClick()">Login</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Multilevel Condition</title>
+    <script>
+        function VerifyCard() {
+            var cardnumber = document.getElementById("txtCard").value;
+            var cvv = document.getElementById("txtCvv").value;
+            var cardexpiry = document.getElementById("lstExpiry").value;
+            var heading = document.querySelector("h3");
+
+            if (cardnumber === "") {
+                heading.innerHTML = "Enter card number".fontcolor("red");
+            }
+            else {
+                if (cardnumber === "11223344") {
+                    if (cvv === "") {
+                        heading.innerHTML = "Enter Cvv Number".fontcolor("red");
+                    }
+                    else {
+                        if (cvv === "2345") {
+                            if (cardexpiry === "-1") {
+                                heading.innerHTML = "Select Card Expiry Date".fontcolor("red");
+                            }
+                            else {
+                                if (cardexpiry === "2025") {
+                                    document.write("Payment Successfull....");
+                                }
+                                else {
+                                    heading.innerHTML = "Invalid Expiry Date--- check again....".fontcolor("red");
+                                }
+                            }
+                        }
+                        else {
+                            heading.innerHTML = "Invalid CVV Number--- Check again....".fontcolor("red");
+                        }
+                    }
+                }
+                else {
+                    heading.innerHTML = "Invalid Card Number-- check again...".fontcolor("red");
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <dl>
+        <dt>Card Number</dt>
+        <dd><input type="text" id="txtCard"></dd>
+        <dt>CVV</dt>
+        <dd><input type="text" id="txtCvv"></dd>
+        <dt>Expiry Date</dt>
+        <dd>
+            <select id="lstExpiry">
+                <option value="-1">Select Expiry</option>
+                <option>2024</option>
+                <option>2025</option>
+                <option>2026</option>
+            </select>
+        </dd>
+    </dl>
+    <button onclick="VerifyCard()">Pay</button>
+    <h3 align="center"></h3>
+</body>
+
+</html>

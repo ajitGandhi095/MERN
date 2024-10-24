@@ -1,0 +1,28 @@
+<!-- Find the value Range between maximum and minimum -->
+ <script>
+    // function findRange(val,min,max) {
+    //     if(val>=min && val<=max) {
+    //         document.write(`Your Value ${val} is in ${min} and ${max}`);
+    //     }
+    //     else {
+    //         document.write(`Your value ${val} is not in ${max} and ${min}`);
+    //     }
+    // }
+
+        // findRange(14,10,20);
+
+                        // Dynamic Given Value
+        function findRange() {
+            var val= prompt("Enter a Value");
+            var min= prompt("Enter Minimum Number");
+            var max= prompt("Enter Maximum Number");
+            if(val>=min && val<=max) {
+                alert(`Your Value ${val} is in ${min} & ${max}`);
+            }
+            else {
+                alert(`Your Value ${val} not in ${min} & ${max}`);
+            }
+        }
+
+        findRange()
+ </script> 

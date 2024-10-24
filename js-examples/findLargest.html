@@ -1,15 +1,15 @@
 <script>
-    function FindLargest(a,b,c) 
-    {
+    function findLargest(a,b,c) {
         if(a>b && a>c) {
-            document.write(`a=${a} is Greater than b=${b} and c=${c}`);
+            document.write(`a=${a} is larger than b=${b} & c=${c}`);
         }
         else if(b>c) {
-            document.write(`b=${b} is Greater than a=${a} and c=${c}`);
+            document.write(`b=${b} is larger than a=${a} & c=${c}`);
         }
         else {
-            document.write(`c=${a} is Greater than a=${a} and b=${b}`);
+            document.write(`c=${c} is larger than a=${a} & b=${b}`);
         }
     }
-    FindLargest(100,300,200);
+    
+    findLargest(50,30,100);
 </script>
