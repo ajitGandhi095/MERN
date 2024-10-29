@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>match() | string</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        var tip = "";
+        var pattern = / /;
+        function CountryChange() {
+            var countryName = document.getElementById("lstCountries").value;
+            var pic = document.getElementById("imgFlag");
+
+            switch (countryName) {
+                case "India":
+                    tip = "eg: +91 and 10 digits number";
+                    pic.src = "../public/images/india.png"
+                    pattern = /\+91\d{10}/;
+                    break;
+                case "USA":
+                    tip = "eg: +(1)(442) 555-0100";
+                    pic.src = "../public/images/usa.png";
+                    pattern = /\+\(1\)\(d{3}\)\s\d{3}\-\d{4}/;
+                    break;
+                case "UK":
+                    tip = "eg: +(44)(20) 1234 5678";
+                    pic.src = "../public/images/uk.jpg";
+                    pattern = /\+\(44\)\(d{2}\)\s\d{4}\s\d{4}/;
+
+            }
+
+            var mobileTextBox = document.getElementById("txtMobile");
+            mobileTextBox.placeholder = tip;
+        }
+
+        function SubmitClick() {
+            var mobile = document.getElementById("txtMobile").value;
+            if (mobile.match(pattern)) {
+                document.getElementById("lblError").innerHTML = "Mobile Verify Successfully".fontcolor("green");
+            }
+            else {
+                document.getElementById("lblError").innerHTML = `Invalid Mobile Number ${tip}`.fontcolor("red");
+            }
+        }
+    </script>
+</head>
+
+<body class="container-fluid">
+
+    <dl class="w-25 mt-2">
+        <dt>Select Country</dt>
+        <dd class="input-group">
+            <select class="form-select" onchange="CountryChange()" id="lstCountries">
+                <option>Select Your Country</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>UK</option>
+            </select>
+            <img class="input-group-text" width="70px" id="imgFlag">
+        </dd>
+        <dt>Mobile Number</dt>
+        <dd>
+            <input type="text" id="txtMobile" class="form-control">
+        </dd>
+        <dd id="lblError"></dd>
+        <dd>
+            <button class="btn btn-warning w-100" onclick="SubmitClick()">Submit</button>
+        </dd>
+    </dl>
+
+</body>
+
+</html>

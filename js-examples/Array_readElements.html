@@ -1,0 +1,38 @@
+<script>
+    var values= [1000,2000,3000,4000,5000,6000];
+    // document.write(values.toString());
+
+    // document.write(values.join("/ "));
+
+    // values.map(function(value, index){
+    //     document.write(`${index}: ${value} <br>`);
+    // })
+
+    // values.forEach(function(value, index){
+    //     document.write(`${index} ${typeof index}: ${value} ${typeof value} <br>`)
+    // })
+
+    // var result= values.find(function(value){
+    //     return value >=5000;
+    // })
+    // document.write(result);
+
+    // var result= values.filter(function(value){
+    //     return value >=5000;
+    // })
+    // document.write(result);
+
+    // document.write(values.slice(1,4))
+    
+    for(var property in values) {
+        document.write(`${property} <br>`)
+    }
+
+    for(var value of values) {
+        document.write(`${value} <br>`)
+    }
+
+    for (var properties in values) {
+        document.write(`${properties} : ${values[properties]} <br>`);
+    }
+</script>

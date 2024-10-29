@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Add</title>
+    <script>
+         var values= ["All", "Electonics", "Fashion", "Footware"];
+        function BodyLoad() {
+                            // Removing element From Array
+            // console.log(values.pop());
+            // console.log(values.shift());
+            // console.log(values.splice(1,2));
+            console.log(values.slice(1,3));
+            values.map(function(category){
+                var option= document.createElement("option");
+                option.text= category;
+                option.value= category;
+                document.querySelector("select").appendChild(option);
+
+                var li= document.createElement("li");
+
+                var input= document.createElement("input");
+                input.type="checkbox";
+
+                var label= document.createElement("label");
+                label.innerHTML= category;
+
+                li.appendChild(input);
+                li.appendChild(label);
+
+                document.querySelector("ul").appendChild(li);
+
+                var button= document.createElement("button");
+                button.innerHTML= category;
+
+                document.querySelector("nav").appendChild(button);
+            })
+        }
+    </script>
+
+</head>
+<body onload="BodyLoad()">
+    
+    <select>
+
+    </select>
+    <ul>
+
+    </ul>
+    <nav>
+
+    </nav>
+
+</body>
+</html>

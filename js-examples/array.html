@@ -1,0 +1,16 @@
+<script>
+    // var values= [10, "AJIT", true, 45.67]
+    // document.write(values);
+
+    var values= new Array();
+    values[0]= 10;
+    values[1]= 20;
+    values[2]= 30;
+    values[3]= "Ajit";
+    values["5"]= "JavaScript"
+    values[4]= true;
+    
+    for (var property in values) {
+        document.write(`${property}[${typeof property}] : ${[values[property]]} [${typeof values[property]}] <br>`);
+    }
+</script>

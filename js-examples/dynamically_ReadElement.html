@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamically Read HTML Element</title>
+    <script>
+        function LoadClick() {
+            //Create Html Element Dynamically
+            var pic= document.createElement("img");
+
+            // Define image properties
+            pic.src= "../public/images/Woman-Fashion.jpg";
+            pic.width= "300";
+            pic.height= "300";
+
+            // Adding into page
+            document.getElementById("container").appendChild(pic);
+        }
+    </script>
+</head>
+<body>
+    
+    <button onclick="LoadClick()">Load Image</button>
+    <br><br>
+    <div id="container">
+
+    </div>
+
+</body>
+</html>
