@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Ajax</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function bodyLoad() {
+            var products= [];
+            var http= new XMLHttpRequest();
+            http.open("get","../data/products.json", true);
+            http.send();
+            http.onreadystatechange= function(){
+
+                if(http.readyState===4) {
+                    // data will be comes in string format , then we can convert into json format
+
+                    // console.log(http.responseText);  
+
+                    //Convert into json format
+                    // console.log(JSON.parse(http.responseText));
+
+                    products= JSON.parse(http.responseText);
+
+                    products.map(function(product){
+                        var div= document.createElement("div");
+                        div.className= "card p-1 m-2";
+                        div.innerHTML= `
+                        <img src=${product.image} class="card-img-top" height="300">
+                        <div class="card-header">
+                            ${product.title}
+                        </div>
+                        <div class="card-body">
+                          &#8377;  ${product.price.toLocaleString("en-in")}
+                        </div>
+                        `;
+                        document.querySelector("main").appendChild(div)
+                    })
+
+                }
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyLoad()">
+    
+    <main class="d-flex">
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+[
+    {
+        "title": "iphone 15 (Black, 128gb)",
+        "image": "../public/images/iphone-black.jpg",
+        "price": 56599
+    },
+    {
+        "title": "iphone 15 (Blue, 256gb)",
+        "image": "../public/images/iphone-blue.png",
+        "price": 58599
+    },
+    {
+        "title": "iphone 15 (Green, 128gb)",
+        "image": "../public/images/iphone-green.jpg",
+        "price": 65599
+    }
+]

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Call</title>
+    <script>
+        function LoadClick() {
+                    //Create a new XMLHttpRequest() object for handling ajax request.
+            var http= new XMLHttpRequest();
+
+                    // Configure the request
+            http.open("get","../data/help.txt",true);
+
+                    // Send the request
+            http.send();
+
+                    // Excecute the request
+            http.onreadystatechange= function() {
+
+                if(http.readyState===4) {
+                    document.getElementById("container").innerHTML= http.responseText
+                }
+            }
+        }
+
+        // function BodyLoad() {
+        //     var now= new Date();
+        //     console.log(`Page Loaded At ${now.toLocaleTimeString()}`)
+        // }
+    </script>
+</head>
+<body onload="BodyLoad()">
+    
+    <button onclick="LoadClick()">Load Content</button>
+    <br><br>
+    <pre id="container">
+
+    </pre>
+
+</body>
+</html>
